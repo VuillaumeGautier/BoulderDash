@@ -22,7 +22,7 @@ public abstract class Main {
      */
     public static void main(final String[] args) {
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-        //hugo;gautier
+        //hugo;gautier;Manu
         try {
             controller.start();
         } catch (final SQLException exception) {
