@@ -1,18 +1,25 @@
-package view;
+package contract;
 
-/**
- * <h1>The Interface IView.</h1>
- *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
- */
 public interface IView {
 
-    /**
-     * Display message.
-     *
-     * @param message
-     *            the message
-     */
-    void displayMessage(String message);
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 * @param sprite
+	 */
+	void show(int x, int y, String sprite);
+
+	/**
+	 * 
+	 * @param messageGameOver
+	 */
+	void displayGameOver(Sting messageGameOver);
+
+	/**
+	 * 
+	 * @param Score
+	 */
+	void displayScore(int Score);
+
 }
