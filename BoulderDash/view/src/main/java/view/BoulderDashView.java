@@ -21,7 +21,7 @@ public class BoulderDashView implements contract.IView {
 	 * 
 	 * @param messageGameOver
 	 */
-	public void displayGameOver(Sting messageGameOver) {
+	public void displayGameOver(String messageGameOver) {
 		// TODO - implement BoulderDashView.displayGameOver
 		throw new UnsupportedOperationException();
 	}

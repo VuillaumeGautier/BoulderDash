@@ -26,9 +26,10 @@ public class keyControler implements KeyListener {
 	 * 
 	 * @param keyEvent
 	 */
-	public void keyRealesed(KeyEvent keyEvent) {
+	public void keyReleased(KeyEvent keyEvent) {
 		// TODO - implement keyControler.keyRealesed
 		throw new UnsupportedOperationException();
 	}
+
 
 }
