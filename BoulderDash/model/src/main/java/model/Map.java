@@ -2,11 +2,11 @@ package model;
 
 import model.IMap.*;
 
-public class Map implements getOnTheMapXY {
+public class Map implements IMap {
 
 	private int width;
 	private int height;
-	private static model.element.IElement[][] onTheMap;
+	private static model.elements.Element[][] onTheMap;
 	private int diamondsPicked = 0;
 	private int diamondsNeeded;
 	private int doorX;
@@ -16,7 +16,7 @@ public class Map implements getOnTheMapXY {
 	 *
 	 * @param String
 	 */
-	public Map(tableName String) {
+	public Map( String tableName) {
 		// TODO - implement Map.Map
 		throw new UnsupportedOperationException();
 	}
@@ -55,8 +55,9 @@ public class Map implements getOnTheMapXY {
 	 * @param x
 	 * @param y
 	 */
-	public static model.element.IElement getOnTheMapXY(int x, int y) {
+	public static model.elements.Element getOnTheMapXY(int x, int y) {
 
+		return onTheMap[x][y];
 	}
 
 	/**
@@ -65,7 +66,7 @@ public class Map implements getOnTheMapXY {
 	 * @param x
 	 * @param y
 	 */
-	public static void setOnTheMapXY(model.element.IElement element, int x, int y) {
+	public static void setOnTheMapXY(model.elements.Element element, int x, int y) {
 
 	}
 

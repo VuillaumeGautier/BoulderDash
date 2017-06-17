@@ -11,7 +11,6 @@ public interface IMap {
 	 * @param x
 	 * @param y
 	 */
-	IElement getOnTheMapXY(int x, int y);
 
 	int getDiamondsPicked();
 

@@ -14,7 +14,7 @@ public interface IView {
 	 * 
 	 * @param messageGameOver
 	 */
-	void displayGameOver(Sting messageGameOver);
+	void displayGameOver(String messageGameOver);
 
 	/**
 	 * 

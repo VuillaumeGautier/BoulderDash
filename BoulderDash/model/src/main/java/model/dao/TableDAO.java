@@ -41,7 +41,7 @@ public abstract class TableDAO extends AbstractDAO {
 	 * @throws SQLException the SQL exception
 	 */
 	public static int getMapMetadataHeight(final int idLevel) throws java.sql.SQLException {
-
+		return 0;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public abstract class TableDAO extends AbstractDAO {
 	 * @throws SQLException the SQL exception
 	 */
 	public static String getMapElement(final int column, int raw, String level) throws java.sql.SQLException {
-
+		return "";
 	}
 
 	/**

@@ -1,17 +1,16 @@
 package model;
 
-import view.*;
 
-public class BoulderDashModel implements IView {
+public class BoulderDashModel {
 
-	private IMap map;
+	private Map map;
 
 	public BoulderDashModel() {
 		// TODO - implement BoulderDashModel.BoulderDashModel
 		throw new UnsupportedOperationException();
 	}
 
-	public IMap getMap() {
+	public Map getMap() {
 		return this.map;
 	}
 
@@ -19,7 +18,7 @@ public class BoulderDashModel implements IView {
 	 * 
 	 * @param map
 	 */
-	public void setMap(IMap map) {
+	public void setMap(Map map) {
 		this.map = map;
 	}
 

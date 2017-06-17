@@ -28,7 +28,8 @@ public class BoulderDashController implements contract.IController {
 	 * @param model
 	 */
 	public BoulderDashController(BoulderDashView view, BoulderDashModel model) {
-		// TODO - implement BoulderDashController.BoulderDashController
+		this.view = view;
+		this.model = model;
 		throw new UnsupportedOperationException();
 	}
 
