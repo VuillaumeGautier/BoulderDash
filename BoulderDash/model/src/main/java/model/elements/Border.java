@@ -6,6 +6,7 @@ public class Border extends Element {
 
 	public Border() {
 		super(SPRITE);
+		//u
 		throw new UnsupportedOperationException();
 	}
 
