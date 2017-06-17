@@ -46,7 +46,7 @@ final class BoulderDashBDDConnector {
 	 * @param instance the new instance
 	 */
 	private static void setInstance(final BoulderDashBDDConnector instance) {
-		this.instance = instance;
+		BoulderDashBDDConnector.instance = instance;
 	}
 
 	/**
@@ -93,7 +93,10 @@ final class BoulderDashBDDConnector {
 	 * @return single instance of BoulderDashBDDConnector
 	 */
 	public static BoulderDashBDDConnector getInstance() {
-		return this.instance;
+		if (instance == null){
+			setInstance(new BoulderDashBDDConnector());
+		}
+		return instance;
 	}
 
 	/**
