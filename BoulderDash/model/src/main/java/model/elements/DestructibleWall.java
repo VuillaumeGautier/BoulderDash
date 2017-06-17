@@ -1,11 +1,11 @@
-package map.elements;
+package model.elements;
 
 public class DestructibleWall extends Element {
 
 	private static String SPRITE = "destructibleWall.png";
 
 	public DestructibleWall() {
-		// TODO - implement DestructibleWall.DestructibleWall
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

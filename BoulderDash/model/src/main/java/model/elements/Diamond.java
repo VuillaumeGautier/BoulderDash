@@ -1,11 +1,11 @@
-package map.elements;
+package model.elements;
 
 public class Diamond extends Motion implements Moves {
 
 	private static String SPRITE = "diamond.png";
 
 	public Diamond() {
-		// TODO - implement Diamond.Diamond
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

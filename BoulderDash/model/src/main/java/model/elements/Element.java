@@ -1,8 +1,8 @@
-package map.elements;
+package model.elements;
 
-import model.IElement.*;
+import model.IElement;
 
-public abstract class Element implements getSprite {
+public abstract class Element implements IElement{
 
 	String sprite;
 

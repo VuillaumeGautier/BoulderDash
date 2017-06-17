@@ -1,11 +1,11 @@
-package map.elements;
+package model.elements;
 
 public class Door extends Element {
 
 	private static String SPRITE = "door.png";
 
 	public Door() {
-		// TODO - implement Door.Door
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

@@ -5,7 +5,7 @@ public class Soil extends Ground {
 	private static String SPRITE = "soil.png";
 
 	public Soil() {
-		// TODO - implement Soil.Soil
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

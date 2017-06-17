@@ -5,7 +5,7 @@ public class Border extends Element {
 	private static String SPRITE = "border.png";
 
 	public Border() {
-		// TODO - implement Border.Border
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

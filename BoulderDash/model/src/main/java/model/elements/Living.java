@@ -2,9 +2,9 @@ package model.elements;
 
 public abstract class Living extends Element {
 
-	public Living() {
-		// TODO - implement Living.Living
-		throw new UnsupportedOperationException();
+	public Living(String sprite) {
+		super(sprite);
+		// TODO Auto-generated constructor stub
 	}
 
 	/**

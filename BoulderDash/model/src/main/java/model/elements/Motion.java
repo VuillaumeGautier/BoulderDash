@@ -4,8 +4,8 @@ public abstract class Motion extends Element {
 
 	boolean mouvement;
 
-	public Motion() {
-		// TODO - implement Motion.Motion
+	public Motion(String sprite ) {
+		super(sprite);
 		throw new UnsupportedOperationException();
 	}
 

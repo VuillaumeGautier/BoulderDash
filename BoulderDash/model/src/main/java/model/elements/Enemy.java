@@ -5,7 +5,7 @@ public class Enemy extends Living implements Moves {
 	private static String SPRITE = "enemy.png";
 
 	public Enemy() {
-		// TODO - implement Enemy.Enemy
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

@@ -6,7 +6,7 @@ public class Rock extends Motion implements Moves {
 	private static String SPRITE = "rock.png";
 
 	public Rock() {
-		// TODO - implement Rock.Rock
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 

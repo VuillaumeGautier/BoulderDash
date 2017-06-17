@@ -5,7 +5,7 @@ public class Player extends Living {
 	private static String SPRITE = "player.png";
 
 	public Player() {
-		// TODO - implement Player.Player
+		super(SPRITE);
 		throw new UnsupportedOperationException();
 	}
 
