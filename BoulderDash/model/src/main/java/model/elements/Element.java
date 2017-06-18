@@ -1,7 +1,5 @@
 package model.elements;
 
-import model.IElement;
-
 public abstract class Element implements IElement{
 
 	String sprite;

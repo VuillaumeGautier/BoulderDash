@@ -1,5 +1,8 @@
 package main;
 
+import view.*;
+import model.*;
+
 /**
  * <h1>The Class Main.</h1>
  * 
@@ -13,6 +16,7 @@ public abstract class Main {
 	 * @param args the arguments
 	 */
 	public static void main(final String[] args) {
+		
 		throw new UnsupportedOperationException();
 	}
 
