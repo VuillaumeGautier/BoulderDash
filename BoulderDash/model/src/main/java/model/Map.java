@@ -1,13 +1,13 @@
 package model;
 
-import model.IMap.*;
+import model.IMap;
 
 public class Map implements IMap {
 
 	private int width;
 	private int height;
 	private static model.elements.Element[][] onTheMap;
-	private int diamondsPicked = 0;
+	private static int diamondsPicked = 0;
 	private int diamondsNeeded;
 	private int doorX;
 	private int doorY;
@@ -106,16 +106,16 @@ public class Map implements IMap {
 		this.diamondsNeeded = diamondsNeeded;
 	}
 
-	public int getDiamondsPicked() {
-		return this.diamondsPicked;
+	public static int getDiamondsPicked() {
+		return Map.diamondsPicked;
 	}
 
 	/**
 	 *
 	 * @param diamondsPicked
 	 */
-	public void setDiamondsPicked(int diamondsPicked) {
-		this.diamondsPicked = diamondsPicked;
+	public static void setDiamondsPicked(int diamondsPicked) {
+		Map.diamondsPicked = diamondsPicked;
 	}
 
 	public void spawnDoor() {

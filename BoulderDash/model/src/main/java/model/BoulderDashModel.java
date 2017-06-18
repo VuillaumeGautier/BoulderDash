@@ -12,6 +12,7 @@ public class BoulderDashModel {
 
 	public Map getMap() {
 		return this.map;
+		
 	}
 
 	/**

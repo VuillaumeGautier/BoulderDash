@@ -12,9 +12,6 @@ public interface IMap {
 	 * @param y
 	 */
 
-	int getDiamondsPicked();
-
-	int getDiamondsNeeded();
 
 	void spawnDoor();
 

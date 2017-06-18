@@ -12,6 +12,7 @@ public class BoulderDashController implements contract.IController {
 	public void play() {
 		// TODO - implement BoulderDashController.play
 		throw new UnsupportedOperationException();
+		
 	}
 
 	public BoulderDashModel getModel() {
