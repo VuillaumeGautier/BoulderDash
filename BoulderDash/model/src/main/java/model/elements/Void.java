@@ -6,7 +6,7 @@ public class Void extends Ground {
 
 	public Void() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 }

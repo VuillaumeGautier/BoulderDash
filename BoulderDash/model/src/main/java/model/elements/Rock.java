@@ -7,7 +7,7 @@ public class Rock extends Motion implements Moves {
 
 	public Rock() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**

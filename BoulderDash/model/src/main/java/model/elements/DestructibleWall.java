@@ -6,7 +6,7 @@ public class DestructibleWall extends Element {
 
 	public DestructibleWall() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**

@@ -18,7 +18,7 @@ public class Map implements IMap {
 	 */
 	public Map( String tableName) {
 		// TODO - implement Map.Map
-		throw new UnsupportedOperationException();
+
 	}
 
 	public int getWidth() {
@@ -47,7 +47,7 @@ public class Map implements IMap {
 
 	public void fillOnTheMap() {
 		// TODO - implement Map.fillOnTheMap
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class Map implements IMap {
 
 	public void spawnDoor() {
 		// TODO - implement Map.spawnDoor
-		throw new UnsupportedOperationException();
+
 	}
 
 }

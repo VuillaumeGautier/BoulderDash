@@ -6,7 +6,7 @@ public class Door extends Element {
 
 	public Door() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**

@@ -7,7 +7,7 @@ public class BoulderDashModel {
 
 	public BoulderDashModel() {
 		// TODO - implement BoulderDashModel.BoulderDashModel
-		throw new UnsupportedOperationException();
+
 	}
 
 	public Map getMap() {
@@ -29,7 +29,7 @@ public class BoulderDashModel {
 	 */
 	public void displayMessage(String message) {
 		// TODO - implement BoulderDashModel.displayMessage
-		throw new UnsupportedOperationException();
+
 	}
 
 }

@@ -42,9 +42,6 @@ public class BoulderDashViewTest {
 	public void testDisplayScore() 
 	{
 		
-		Map map = new Map();
- 
-		assertNotNull(diamandRestant);
 		//fail("Not yet implemented");
 	}
 

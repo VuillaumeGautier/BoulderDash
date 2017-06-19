@@ -6,7 +6,7 @@ public class Player extends Living {
 
 	public Player() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class Player extends Living {
 	 */
 	public void moveUp(int x, int y) {
 		// TODO - implement Player.moveUp
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Player extends Living {
 	 */
 	public void moveDown(int x, int y) {
 		// TODO - implement Player.moveDown
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class Player extends Living {
 	 */
 	public void moveLeft(int x, int y) {
 		// TODO - implement Player.moveLeft
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Player extends Living {
 	 */
 	public void moveRight(int x, int y) {
 		// TODO - implement Player.moveRight
-		throw new UnsupportedOperationException();
+
 	}
 
 }

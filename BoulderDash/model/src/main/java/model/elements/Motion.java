@@ -6,7 +6,7 @@ public abstract class Motion extends Element {
 
 	public Motion(String sprite ) {
 		super(sprite);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**

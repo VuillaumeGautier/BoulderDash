@@ -10,7 +10,6 @@ public class keyControler implements KeyListener {
 	 */
 	public void keyPressed(KeyEvent e) {
 		// TODO - implement keyControler.keyPressed
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -19,16 +18,19 @@ public class keyControler implements KeyListener {
 	 */
 	public void keyTyped(KeyEvent e) {
 		// TODO - implement keyControler.keyTyped
-		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * 
 	 * @param keyEvent
 	 */
-	public void keyRealesed(KeyEvent e) {
-		// TODO - implement keyControler.keyRealesed
-		throw new UnsupportedOperationException();
+
+	
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

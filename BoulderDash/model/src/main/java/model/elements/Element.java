@@ -10,7 +10,7 @@ public abstract class Element implements IElement{
 	 */
 	public Element(String sprite) {
 		// TODO - implement Element.Element
-		throw new UnsupportedOperationException();
+
 	}
 
 	public String getSprite() {

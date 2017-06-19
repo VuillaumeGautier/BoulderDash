@@ -6,7 +6,7 @@ public class Enemy extends Living implements Moves {
 
 	public Enemy() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**

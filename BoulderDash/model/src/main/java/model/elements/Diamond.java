@@ -6,7 +6,7 @@ public class Diamond extends Motion implements Moves {
 
 	public Diamond() {
 		super(SPRITE);
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
