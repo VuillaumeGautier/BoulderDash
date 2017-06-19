@@ -8,14 +8,4 @@ public class Soil extends Ground {
 		super(SPRITE);
 
 	}
-
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
-	public void destruction(int x, int y) {
-
-	}
-
 }

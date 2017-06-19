@@ -11,6 +11,7 @@ public class Map implements IMap {
 	private int diamondsNeeded;
 	private int doorX;
 	private int doorY;
+	private static boolean levelEnded = false;
 
 	/**
 	 *
@@ -121,6 +122,14 @@ public class Map implements IMap {
 	public void spawnDoor() {
 		// TODO - implement Map.spawnDoor
 
+	}
+
+	public static boolean getLevelEnded() {
+		return levelEnded;
+	}
+
+	public static void setLevelEnded(boolean levelEnded) {
+		Map.levelEnded = levelEnded;
 	}
 
 }

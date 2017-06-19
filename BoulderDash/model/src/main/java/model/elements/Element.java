@@ -31,7 +31,7 @@ public abstract class Element implements IElement{
 	 * @param x
 	 * @param y
 	 */
-	public void walkOver(int x, int y) {
+	public void walkOver(int x, int y, char direction) {
 
 	}
 
