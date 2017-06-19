@@ -64,6 +64,7 @@ public /*abstract*/ class TableDAO extends AbstractDAO {
 	 */
 	public static int getMapMetadataWidth(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataWight
+		
 		return 0;
 	}
 

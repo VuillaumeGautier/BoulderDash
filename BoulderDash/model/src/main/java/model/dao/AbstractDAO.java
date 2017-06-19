@@ -15,6 +15,7 @@ public abstract class AbstractDAO {
 	 */
 	protected static java.sql.ResultSet executeQuery(final String query) {
 		return BoulderDashBDDConnector.getInstance().executeQuery(query);
+		
 	}
 
 	/**
