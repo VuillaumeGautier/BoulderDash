@@ -40,13 +40,13 @@ public class DiamondTest {
 	public void testWalkOver_DiamondsPicked() {
 		final int expected = 1;
 		assertEquals(expected, Map.getDiamondsPicked());
-		//
+		
 	}
 	@Test
 	public void testWalkOver() {
 		final String expected = "player.png";
 		assertEquals(expected, Map.getOnTheMapXY(0, 0).getSprite());
-		
+		//
 	}
 	
 	@Test
