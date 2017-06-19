@@ -8,7 +8,7 @@ public class keyControler implements KeyListener {
 	 * 
 	 * @param keyEvent
 	 */
-	public void keyPressed(KeyEvent keyEvent) {
+	public void keyPressed(KeyEvent e) {
 		// TODO - implement keyControler.keyPressed
 		throw new UnsupportedOperationException();
 	}
@@ -17,7 +17,7 @@ public class keyControler implements KeyListener {
 	 * 
 	 * @param keyEvent
 	 */
-	public void keyTyped(KeyEvent keyEvent) {
+	public void keyTyped(KeyEvent e) {
 		// TODO - implement keyControler.keyTyped
 		throw new UnsupportedOperationException();
 	}
@@ -26,10 +26,9 @@ public class keyControler implements KeyListener {
 	 * 
 	 * @param keyEvent
 	 */
-	public void keyReleased(KeyEvent keyEvent) {
+	public void keyRealesed(KeyEvent e) {
 		// TODO - implement keyControler.keyRealesed
 		throw new UnsupportedOperationException();
 	}
-
 
 }

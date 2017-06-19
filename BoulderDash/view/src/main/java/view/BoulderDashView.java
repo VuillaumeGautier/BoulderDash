@@ -14,7 +14,7 @@ public class BoulderDashView implements contract.IView {
 	 */
 	public void show(int x, int y, String sprite) {
 		// TODO - implement BoulderDashView.show
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class BoulderDashView implements contract.IView {
 	 */
 	public void displayGameOver(String messageGameOver) {
 		// TODO - implement BoulderDashView.displayGameOver
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -31,13 +31,16 @@ public class BoulderDashView implements contract.IView {
 	 * @param Score
 	 */
 	public void displayScore(int Score) {
+		
 		// TODO - implement BoulderDashView.displayScore
-		throw new UnsupportedOperationException();
+		
+		
+		
 	}
 
 	public void view() {
 		// TODO - implement BoulderDashView.view
-		throw new UnsupportedOperationException();
+		
 	}
 
 }
