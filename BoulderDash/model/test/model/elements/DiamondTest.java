@@ -46,7 +46,7 @@ public class DiamondTest {
 	public void testWalkOver() {
 		final String expected = "player.png";
 		assertEquals(expected, Map.getOnTheMapXY(0, 0).getSprite());
-		//
+		
 	}
 	
 	@Test
