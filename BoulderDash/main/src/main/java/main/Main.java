@@ -1,6 +1,7 @@
 package main;
 
 import view.*;
+import controller.BoulderDashController;
 import model.*;
 
 /**
@@ -17,6 +18,10 @@ public abstract class Main {
 	 */
 	public static void main(final String[] args) {
 		
+		BoulderDashModel model = new BoulderDashModel();
+		BoulderDashView view = new BoulderDashView();
+		BoulderDashController ctrl = new BoulderDashController(view, model);
+		ctrl.play();
 	}
 
 }
