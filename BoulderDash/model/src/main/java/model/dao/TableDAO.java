@@ -6,7 +6,7 @@ package model.dao;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public abstract class TableDAO extends AbstractDAO {
+public /*abstract*/ class TableDAO extends AbstractDAO {
 
 	/**
 	 * The sql example by id.
@@ -62,7 +62,7 @@ public abstract class TableDAO extends AbstractDAO {
 	 * @return the example by id
 	 * @throws SQLException the SQL exception
 	 */
-	public static int getMapMetadataWight(final int idLevel) throws java.sql.SQLException {
+	public static int getMapMetadataWidth(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataWight
 		throw new UnsupportedOperationException();
 	}
