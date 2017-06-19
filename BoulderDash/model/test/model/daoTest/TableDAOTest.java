@@ -14,7 +14,6 @@ import org.junit.Test;
 import model.dao.TableDAO;
 
 public class TableDAOTest {
-
 	static TableDAO table;
 	
 	@BeforeClass

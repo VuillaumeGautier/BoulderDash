@@ -14,8 +14,7 @@ public abstract class AbstractDAO {
 	 * @return the result set
 	 */
 	protected static java.sql.ResultSet executeQuery(final String query) {
-		// TODO - implement AbstractDAO.executeQuery
-		throw new UnsupportedOperationException();
+		return BoulderDashBDDConnector.getInstance().executeQuery(query);
 	}
 
 	/**
@@ -24,8 +23,7 @@ public abstract class AbstractDAO {
 	 * @return the int
 	 */
 	protected static int executeUpdate(final String query) {
-		// TODO - implement AbstractDAO.executeUpdate
-		throw new UnsupportedOperationException();
+		return BoulderDashBDDConnector.getInstance().executeUpdate(query);
 	}
 
 	/**
@@ -34,8 +32,7 @@ public abstract class AbstractDAO {
 	 * @return the callable statement
 	 */
 	protected static java.sql.CallableStatement prepareCall(final String query) {
-		// TODO - implement AbstractDAO.prepareCall
-		throw new UnsupportedOperationException();
+		return BoulderDashBDDConnector.getInstance().prepareCall(query);
 	}
 
 }

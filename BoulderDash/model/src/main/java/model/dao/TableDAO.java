@@ -64,7 +64,7 @@ public /*abstract*/ class TableDAO extends AbstractDAO {
 	 */
 	public static int getMapMetadataWidth(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataWight
-		throw new UnsupportedOperationException();
+		return 0;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public /*abstract*/ class TableDAO extends AbstractDAO {
 	 */
 	public static int getMapMetadataDiamondsNeeded(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataDiamondsNeeded
-		throw new UnsupportedOperationException();
+		return 0;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public /*abstract*/ class TableDAO extends AbstractDAO {
 	 */
 	public static int getMapMetadataDoorX(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataDoorX
-		throw new UnsupportedOperationException();
+		return 0;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public /*abstract*/ class TableDAO extends AbstractDAO {
 	 */
 	public static int getMapMetadataDoorY(final int idLevel) throws java.sql.SQLException {
 		// TODO - implement ExampleDAO.getMapMetadataDoorY
-		throw new UnsupportedOperationException();
+		return 0;
 	}
 
 	public String getLevel() {

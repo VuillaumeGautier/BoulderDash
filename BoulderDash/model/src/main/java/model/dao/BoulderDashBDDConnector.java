@@ -1,5 +1,10 @@
 package model.dao;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.cj.api.jdbc.Statement;
+
 /**
  * <h1>The Class BoulderDashBDDConnector.</h1>
  * 
@@ -37,9 +42,20 @@ final class BoulderDashBDDConnector {
 	 * Instantiates a new boulder dash BDD connector.
 	 */
 	private BoulderDashBDDConnector() {
-		// TODO - implement BoulderDashBDDConnector.BoulderDashBDDConnector
-		throw new UnsupportedOperationException();
+		this.open();
 	}
+	
+	/**
+	 * Gets the single instance of BoulderDashBDDConnector.
+	 * @return single instance of BoulderDashBDDConnector
+	 */
+	public static BoulderDashBDDConnector getInstance() {
+		if (instance == null){
+			setInstance(new BoulderDashBDDConnector());
+		}
+		return instance;
+	}
+
 
 	/**
 	 * Sets the instance.
@@ -54,8 +70,14 @@ final class BoulderDashBDDConnector {
 	 * @return true, if successful
 	 */
 	private boolean open() {
-		// TODO - implement BoulderDashBDDConnector.open
-		throw new UnsupportedOperationException();
+		try {
+			this.connection = DriverManager.getConnection(BoulderDashBDDConnector.url, BoulderDashBDDConnector.user, BoulderDashBDDConnector.password);
+	        this.statement = this.connection.createStatement();
+	            return true;
+	        } catch (final SQLException exception) {
+	            exception.printStackTrace();
+	        }
+	        return false;
 	}
 
 	/**
@@ -64,8 +86,12 @@ final class BoulderDashBDDConnector {
 	 * @return the result set
 	 */
 	public java.sql.ResultSet executeQuery(final String query) {
-		// TODO - implement BoulderDashBDDConnector.executeQuery
-		throw new UnsupportedOperationException();
+		 try {
+	            return this.getStatement().executeQuery(query);
+	        } catch (final SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return null;
 	}
 
 	/**
@@ -74,8 +100,12 @@ final class BoulderDashBDDConnector {
 	 * @return the java.sql. callable statement
 	 */
 	public java.sql.CallableStatement prepareCall(final String query) {
-		// TODO - implement BoulderDashBDDConnector.prepareCall
-		throw new UnsupportedOperationException();
+		  try {
+	            return this.getConnection().prepareCall(query);
+	        } catch (final SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return null;
 	}
 
 	/**
@@ -84,19 +114,12 @@ final class BoulderDashBDDConnector {
 	 * @return the int
 	 */
 	public int executeUpdate(final String query) {
-		// TODO - implement BoulderDashBDDConnector.executeUpdate
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * Gets the single instance of BoulderDashBDDConnector.
-	 * @return single instance of BoulderDashBDDConnector
-	 */
-	public static BoulderDashBDDConnector getInstance() {
-		if (instance == null){
-			setInstance(new BoulderDashBDDConnector());
-		}
-		return instance;
+	    try {
+            return this.statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+        } catch (final SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
 	}
 
 	/**
