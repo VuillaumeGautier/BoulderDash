@@ -1,7 +1,6 @@
-package model.daoTest;
+package model.dao;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.sql.SQLException;
 
@@ -11,11 +10,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import model.dao.TableDAO;
+public class MetadataDAOTest {
+	static MetadataDAO table;
 
-public class TableDAOTest {
-	static TableDAO table;
-	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -26,7 +23,7 @@ public class TableDAOTest {
 
 	@Before
 	public void setUp() throws Exception {
-		TableDAO table = new TableDAO();
+		MetadataDAO table = new MetadataDAO();
 	}
 
 	@After
@@ -35,7 +32,6 @@ public class TableDAOTest {
 
 	@Test
 	public void testGetMapMetadataHeight() throws SQLException {
-				
 		final int expectedLv1 = 10;
 		final int expectedLv2 = 15;
 		final int expectedLv3 = 20;
@@ -47,11 +43,6 @@ public class TableDAOTest {
 		assertEquals(expectedLv3, table.getMapMetadataHeight(3));
 		assertEquals(expectedLv4, table.getMapMetadataHeight(4));
 		assertEquals(expectedLv5, table.getMapMetadataHeight(5));
-	}
-
-	@Test
-	public void testGetMapElement() {
-		fail("Not yet implemented");
 	}
 
 	@Test
