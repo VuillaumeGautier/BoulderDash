@@ -27,8 +27,6 @@ public class Rock extends Motion implements Moves {
 	public void walkOver(int x, int y, char direction) {
 		
 		
-		
-		
 		switch (direction){
 		case 'l':
 			

@@ -58,6 +58,12 @@ public class Enemy extends Living implements Moves {
 	 */
 	public void move(int x, int y) {
 
+		
+		
+		
+		
+		
+		
 	}
 
 	/**

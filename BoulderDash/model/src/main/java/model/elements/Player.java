@@ -49,6 +49,21 @@ public class Player extends Living {
 	 * @param direction
 	 */
 	public void move(int x, int y,int direction) {
+		
+		switch (direction){
+			case 38:
+				//haut
+				break;
+			case 40:
+				//bas
+				break;
+			case 37:
+				//gauche
+			case 39:
+				//droite
+				break;
+		}
+		
 
 	}
 

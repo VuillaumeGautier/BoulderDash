@@ -12,7 +12,7 @@ import model.Map;
 
 public abstract class Motion extends Element {
 
-	boolean mouvement;
+	boolean movement;
 	
 	public Motion(String sprite ) {
 		super(sprite);
@@ -25,6 +25,12 @@ public abstract class Motion extends Element {
 	 * @param y
 	 */
 	public void move(int x, int y) {
+		
+		if (Map.getOnTheMapXY(x, y+1).getSprite()=="Void.png"){
+	
+		}
+		
+		
 		
 		
 	}
