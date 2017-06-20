@@ -6,6 +6,7 @@ public class EventPerformer {
 	
 	public int keyCodeToUser(int keyUser) 
 	{
+		// recupere code de la touche appuyée 
 		return keyUser;
 	}
 
