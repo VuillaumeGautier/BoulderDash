@@ -1,6 +1,7 @@
 package view;
 
-public class EventPerformer {
+public class EventPerformer 
+{
 
 	private int keyUser;
 	
@@ -8,6 +9,14 @@ public class EventPerformer {
 	{
 		// recupere code de la touche appuyée 
 		return keyUser;
+	}
+
+	public int getKeyUser() {
+		return keyUser;
+	}
+
+	public void setKeyUser(int keyUser) {
+		this.keyUser = keyUser;
 	}
 
 }
