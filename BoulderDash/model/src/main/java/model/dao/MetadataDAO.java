@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @author Hugo Routy
  * @version 1.0
  */
-public /*abstract*/ class MetadataDAO extends AbstractDAO {
+public class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the height of the map
