@@ -4,7 +4,7 @@ CREATE TABLE Metadata(
         idLevel        int (11) Auto_increment  NOT NULL ,
         Height         Int ,
         Width          Int ,
-        DiamondsNeeded Int ,
+        DIAMONDsNeeded Int ,
         DoorX          Int ,
         DoorY          Int ,
         PRIMARY KEY (idLevel )
