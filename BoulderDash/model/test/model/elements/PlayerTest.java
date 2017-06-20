@@ -57,7 +57,7 @@ public class PlayerTest {
 		assertEquals(expected, Map.getOnTheMapXY(4, 4).getSprite());
 	}
 
-	@Test
+	@Test//
 	public void testMoveDown() {
 		final String expected = "player.png";
 		assertEquals(expected, Map.getOnTheMapXY(4, 6).getSprite());

@@ -15,7 +15,7 @@ public class Player extends Living {
 	 * @param y
 	 */
 	public void destruction(int x, int y) {
-
+		death(x, y);
 	}
 
 	/**
@@ -25,6 +25,11 @@ public class Player extends Living {
 	 */
 	public void death(int x, int y) {
 
+	}
+	
+	public void walkOver(int x, int y, char direction){
+		
+		
 	}
 
 	/**

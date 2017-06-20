@@ -16,7 +16,7 @@ public interface IElement {
 	 * @param x
 	 * @param y
 	 */
-	void walkOver(int x, int y);
+	void walkOver(int x, int y,  char direction);
 
 	/**
 	 * 

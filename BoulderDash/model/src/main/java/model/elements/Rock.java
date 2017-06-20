@@ -1,8 +1,9 @@
 package model.elements;
 
+import model.Map;
+
 public class Rock extends Motion implements Moves {
 
-	private boolean pushed;
 	private static String SPRITE = "rock.png";
 
 	public Rock() {
@@ -15,17 +16,29 @@ public class Rock extends Motion implements Moves {
 	 * @param x
 	 * @param y
 	 */
-	public void destruction(int x, int y) {
 
-	}
 
 	/**
 	 *
 	 * @param x
 	 * @param y
 	 */
-	public void walkOver(int x, int y) {
-
+	public void walkOver(int x, int y, char direction) {
+		
+		
+		
+		
+		switch (direction){
+		case 'l':
+			
+			
+			break;
+		case 'r':
+			
+			
+			break;
+			
+		}
 	}
 
 	/**
@@ -34,7 +47,7 @@ public class Rock extends Motion implements Moves {
 	 * @param y
 	 */
 	public void moveUp(int x, int y) {
-
+		//void
 	}
 
 	/**

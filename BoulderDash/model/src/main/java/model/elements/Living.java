@@ -13,7 +13,6 @@ public abstract class Living extends Element {
 	 * @param y
 	 */
 	public void death(int x, int y) {
-
 	}
 
 }
