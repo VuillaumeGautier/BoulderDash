@@ -15,7 +15,7 @@ public class GamePanel extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final Image NULL = null;
+	private static final Image NULL = null; 
 
 	public GamePanel(String  spriteName, int spriteX , int spriteY ,Graphics g ) 
 	{

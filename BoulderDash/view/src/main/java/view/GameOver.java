@@ -17,7 +17,7 @@ public class GameOver extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private static final Image NULL = null;
 
-	public GameOver(Graphics g ) 
+	public GameOver(Graphics g )  
 	{
 		
 		String adress = "/boulderdash/sprites/GameOver.png";
