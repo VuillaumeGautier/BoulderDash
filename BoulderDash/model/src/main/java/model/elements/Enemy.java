@@ -13,6 +13,7 @@ import model.Map;
 public class Enemy extends Living implements Moves {
 
 	private static String SPRITE = "enemy.png";
+	private char direction = 'r';
 
 	public Enemy() {
 		super(SPRITE);
@@ -57,13 +58,28 @@ public class Enemy extends Living implements Moves {
 	 * @param y
 	 */
 	public void move(int x, int y) {
-
+		switch (direction){
 		
+		case 'r':
+			moveRight(x, y);
+			
+			break;
 		
+		case 'l':
+			moveLeft(x, y);
+			
+			break;
 		
+		case 'u':
+			moveUp(x, y);
+			
+			break;
 		
-		
-		
+		case 'd':
+			moveDown(x, y);
+			
+			break;
+		}
 	}
 
 	/**
@@ -91,6 +107,56 @@ public class Enemy extends Living implements Moves {
 	 */
 	public void moveLeft(int x, int y) {
 
+		if (freePlace(x,y-1)==false && freePlace(x-1,y)){
+			//Wall on the right, nothing forward
+			Map.getOnTheMapXY(x-1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y-1)==false && freePlace(x-1,y)==false && freePlace(x,y+1)){
+			//Wall on the right, wall forward, nothing left
+			direction = 'u';
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y, direction);
+		}
+		
+		if (freePlace(x,y-1)==false && freePlace(x-1,y)==false && freePlace(x,y+1)==false && freePlace(x+1,y)){
+			//Wall on the right, wall forward, wall left, nothing back
+			direction = 'l';
+			Map.getOnTheMapXY(x-1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y-1)==false && freePlace(x-1,y)==false && freePlace(x,y+1)==false && freePlace(x+1,y)== false){
+			//Surrounded of wall
+		}
+		
+		
+		if (freePlace(x,y-1) && freePlace(x+1,y-1)==false){
+			//Nothing right, wall behind right
+			direction = 'd';
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)){
+			//Nothing right, nothing behind right, nothing forward
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)){
+			//Nothing right, nothing behind right, wall forward, nothing left
+			direction = 'u';
+			Map.getOnTheMapXY(x, y-1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y)){
+			//Nothing right, nothing behind right, wall forward, wall left, nothing back
+			direction = 'l';
+			Map.getOnTheMapXY(x-1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y) == false){
+			//Nothing right, nothing behind right, wall forward, wall left, wall back
+			direction = 'd';
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
 	}
 
 	/**
@@ -99,7 +165,68 @@ public class Enemy extends Living implements Moves {
 	 * @param y
 	 */
 	public void moveRight(int x, int y) {
+		
+		if (freePlace(x,y+1)==false && freePlace(x+1,y)){
+			//Wall on the right, nothing forward
+			Map.getOnTheMapXY(x+1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1)==false && freePlace(x+1,y)==false && freePlace(x,y-1)){
+			//Wall on the right, wall forward, nothing left
+			direction = 'u';
+			Map.getOnTheMapXY(x, y-1).walkOver(x, y, direction);
+		}
+		
+		if (freePlace(x,y+1)==false && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y)){
+			//Wall on the right, wall forward, wall left, nothing back
+			direction = 'l';
+			Map.getOnTheMapXY(x-1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1)==false && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y)== false){
+			//Surrounded of wall
+		}
+		
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1)==false){
+			//Nothing right, wall behind right
+			direction = 'd';
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)){
+			//Nothing right, nothing behind right, nothing forward
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)){
+			//Nothing right, nothing behind right, wall forward, nothing left
+			direction = 'u';
+			Map.getOnTheMapXY(x, y-1).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y)){
+			//Nothing right, nothing behind right, wall forward, wall left, nothing back
+			direction = 'l';
+			Map.getOnTheMapXY(x-1, y).walkOver(x, y,direction);
+		}
+		
+		if (freePlace(x,y+1) && freePlace(x-1,y+1) && freePlace(x+1,y)==false && freePlace(x,y-1)==false && freePlace(x-1,y) == false){
+			//Nothing right, nothing behind right, wall forward, wall left, wall back
+			direction = 'd';
+			Map.getOnTheMapXY(x, y+1).walkOver(x, y,direction);
+		}
 
+	}
+	
+	public boolean freePlace(int x, int y){
+		if(Map.getOnTheMapXY(x, y).getSprite()=="Void.png" || Map.getOnTheMapXY(x, y).getSprite()=="Player.png"){
+			return true;
+		}
+		else {
+			return false;
+		}
+		
 	}
 
 }

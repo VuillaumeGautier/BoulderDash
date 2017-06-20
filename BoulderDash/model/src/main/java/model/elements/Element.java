@@ -48,7 +48,7 @@ public abstract class Element implements IElement{
 	 * @param x
 	 * @param y
 	 */
-	public void move(int x, int y) {
+	public void move(int x, int y, int direction) {
 
 	}
 

@@ -31,6 +31,6 @@ public interface IElement {
 	 * @param x
 	 * @param y
 	 */
-	void move(int x, int y);
+	void move(int x, int y, int directio);
 
 }

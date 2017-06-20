@@ -24,10 +24,10 @@ public abstract class Motion extends Element {
 	 * @param x
 	 * @param y
 	 */
-	public void move(int x, int y) {
+	public void move(int x, int y, int direction) {
 		
 		if (Map.getOnTheMapXY(x, y+1).getSprite()=="Void.png"){
-	
+			
 		}
 		
 		
