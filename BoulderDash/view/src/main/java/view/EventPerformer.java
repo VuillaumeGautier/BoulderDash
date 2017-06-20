@@ -11,6 +11,8 @@ public class EventPerformer
 		return keyUser;
 	}
 
+	
+	//================================================================
 	public int getKeyUser() {
 		return keyUser;
 	}
