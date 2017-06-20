@@ -140,6 +140,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	 */
 	public String getElement (int idLevel, int column, int row) throws SQLException{
 		String element = "";
+		column =+ 1;
 		ArrayList<String> elementsRow = new ArrayList<String>(); 
 		switch (idLevel){
 			case 1 : 
