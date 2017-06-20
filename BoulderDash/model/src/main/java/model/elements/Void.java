@@ -7,7 +7,6 @@ package model.elements;
  * @version 1.0
  */
 
-
 public class Void extends Ground {
 
 	private static String SPRITE = "void.png";
