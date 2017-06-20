@@ -10,7 +10,7 @@ import model.Map;
  */
 
 
-public class Rock extends Motion implements Moves {
+public class Rock extends Motion {
 
 	private static String SPRITE = "rock.png";
 
