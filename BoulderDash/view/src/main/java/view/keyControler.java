@@ -1,36 +1,41 @@
 package view;
 
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JLabel;
 
 public class keyControler implements KeyListener {
-
-	/**
-	 * 
-	 * @param keyEvent
-	 */
-	public void keyPressed(KeyEvent e) {
-		// TODO - implement keyControler.keyPressed
-	}
-
-	/**
-	 * 
-	 * @param keyEvent
-	 */
-	public void keyTyped(KeyEvent e) {
-		// TODO - implement keyControler.keyTyped
-	}
-
-	/**
-	 * 
-	 * @param keyEvent
-	 */
-
 	
+	private int keyUser;
 
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
+	private JLabel label;
+
+    public void TitreKeyListener(JLabel label_) {
+        label = label_;
+    }
+ 
+    public void keyPressed(KeyEvent e) {
+       keyUser = e.getKeyCode();
+    }
+ 
+    public void keyReleased(KeyEvent e) {
+    }
+ 
+    public void keyTyped(KeyEvent e) {
+    }
+
+    
+    //=================getter and setter KEYUSER ======================
+    //=================================================================
+	public int getKeyUser() {
+		return keyUser;
 	}
+
+	public void setKeyUser(int keyUser) {
+		this.keyUser = keyUser;
+	}
+    
+        
 
 }

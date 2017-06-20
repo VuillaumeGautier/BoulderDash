@@ -1,28 +1,32 @@
 package view;
 
-public class BoulderDashView implements contract.IView {
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import view.GamePanel;
+import view.GameOver;
 
-	private String messageGameOver;
-	private int x;
-	private int y;
 
-	/**
-	 * affiche tout les éléments celon coordonée
-	 * @param x
-	 * @param y
-	 * @param sprite
-	 */
-	public void show(int x, int y, String sprite) {
-		// TODO - implement BoulderDashView.show
+public class BoulderDashView extends JFrame implements contract.IView  {
+
+	private static final long serialVersionUID = 1L;
+	private static final String String = null;
+
+	private GamePanel gamePanel;
+	private GameOver gameOver;
+	
+
+	
+	public void show(int x, int y, String sprite)  
+	{	
 		
-	}
-
-	/**
-	 * 
-	 * @param messageGameOver
-	 */
-	public void displayGameOver(String messageGameOver) {
-		// TODO - implement BoulderDashView.displayGameOver
+		this.setTitle("Boulderdash");
+		this.setSize(x, y);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		JPanel pan = new JPanel();
+		this.setContentPane(pan);
+		this.setContentPane(new GamePanel(sprite, x, y, null)); 
+		
 		
 	}
 
@@ -38,9 +42,22 @@ public class BoulderDashView implements contract.IView {
 		
 	}
 
-	public void view() {
-		// TODO - implement BoulderDashView.view
+	@Override
+	public void displayGameOver(java.lang.String messageGameOver) {
 		
+		
+		this.setTitle("Boulderdash");
+		this.setSize(640, 640);
+		this.setVisible(true);
+		
+		JPanel panOver = new JPanel();
+		this.setContentPane(panOver);
+		this.setLocationRelativeTo(null);
+	   
+	    this.setContentPane(new GameOver(null));
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
+
+	
 
 }

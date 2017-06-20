@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class GamePanel extends JPanel{
+public class GameOver extends JPanel{
 
 	
 	/**
@@ -17,22 +17,22 @@ public class GamePanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private static final Image NULL = null;
 
-	public GamePanel(String  spriteName, int spriteX , int spriteY ,Graphics g ) 
+	public GameOver(Graphics g ) 
 	{
 		
-		String adress = "/boulderdash/sprites/";
-		String adresseSprite = adress + spriteName; 
+		String adress = "/boulderdash/sprites/GameOver.png";
+
 		
 		Image img = NULL;
 		try {
-			img = ImageIO.read(new File(adresseSprite));
+			img = ImageIO.read(new File(adress));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	
-		g.drawImage(img,spriteX*16,spriteY*16, this);
+		g.drawImage(img,0,0, this);
 		
 	}
 
