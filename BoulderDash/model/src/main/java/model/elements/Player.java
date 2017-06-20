@@ -1,5 +1,17 @@
 package model.elements;
 
+import model.Map;
+
+
+
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public class Player extends Living {
 
 	private static String SPRITE = "player.png";
@@ -10,22 +22,22 @@ public class Player extends Living {
 	}
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 * Launch the death of the player
+	 * @param position
 	 */
 	public void destruction(int x, int y) {
 		death(x, y);
 	}
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 * Set the map as "lost", so the controller can get the game is lost
+	 * @param position
 	 */
 	public void death(int x, int y) {
-
+		Map.setLevelLost(true);
 	}
+	
+	
 	
 	public void walkOver(int x, int y, char direction){
 		
@@ -36,7 +48,7 @@ public class Player extends Living {
 	 *
 	 * @param direction
 	 */
-	public void move(int direction) {
+	public void move(int x, int y,int direction) {
 
 	}
 

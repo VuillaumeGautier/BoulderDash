@@ -1,25 +1,33 @@
 package model.elements;
 
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public abstract class ElementFactory {
 
-	private static Rock ROCK = new Rock();
-	private static Diamond DIAMOND = new Diamond();
-	private static Enemy ENEMY = new Enemy();
-	private static Player PLAYER = new Player();
-	private static Void VOID = new Void();
-	private static Soil SOIL = new Soil();
-	private static Door DOOR = new Door();
-	private static Border BORDER = new Border();
-	private static DestructibleWall DESTRUCTIBLEWALL = new DestructibleWall();
-	private static Element[] elements = {ROCK,DIAMOND,ENEMY,PLAYER,VOID,SOIL,DOOR,BORDER,DESTRUCTIBLEWALL};
+	private static Rock Rock = new Rock();
+	private static Diamond Diamond = new Diamond();
+	private static Enemy Enemy = new Enemy();
+	private static Player Player = new Player();
+	private static Void Void = new Void();
+	private static Soil Soil = new Soil();
+	private static Door Door = new Door();
+	private static Border Border = new Border();
+	private static DestructibleWall Destructible = new DestructibleWall();
+	private static Element[] elements = {Rock,Diamond,Enemy,Player,Void,Soil,Door,Border,Destructible};
 
 	/**
 	 *
 	 * @param tableSymbol
 	 */
-	public Element getFromTableSymbol(String tableSymbol) {
+	public Element getFromTableSymbol(String table) {
 		
-		return VOID;
+		return Void;
 	}
 
 }

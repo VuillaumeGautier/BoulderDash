@@ -12,6 +12,7 @@ public class Map implements IMap {
 	private int doorX;
 	private int doorY;
 	private static boolean levelEnded = false;
+	private static boolean levelLost = false;
 
 	/**
 	 *
@@ -130,6 +131,14 @@ public class Map implements IMap {
 
 	public static void setLevelEnded(boolean levelEnded) {
 		Map.levelEnded = levelEnded;
+	}
+
+	public static boolean getLevelLost() {
+		return levelLost;
+	}
+
+	public static void setLevelLost(boolean levelLost) {
+		Map.levelLost = levelLost;
 	}
 
 }

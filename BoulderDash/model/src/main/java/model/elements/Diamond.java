@@ -2,6 +2,14 @@ package model.elements;
 
 import model.Map;
 
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public class Diamond extends Motion implements Moves {
 
 	private static String SPRITE = "diamond.png";
@@ -13,8 +21,8 @@ public class Diamond extends Motion implements Moves {
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * Put a Void when the wall is destructed
+	 * @param position
 	 */
 	public void destruction(int x, int y) {
 		Map.setOnTheMapXY(new Void(), x, y);
@@ -49,8 +57,7 @@ public class Diamond extends Motion implements Moves {
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * @param position
 	 */
 	public void moveUp(int x, int y) {
 		//void

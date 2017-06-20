@@ -2,6 +2,14 @@ package model.elements;
 
 import model.Map;
 
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public abstract class Motion extends Element {
 
 	boolean mouvement;
@@ -21,10 +29,6 @@ public abstract class Motion extends Element {
 		
 	}
 	
-	public void walkOver(int x, int y, char direction){
-		
-		
-	}
 	
 	public void destruction(int x, int y) {
 		Map.setOnTheMapXY(new Void(), x, y);

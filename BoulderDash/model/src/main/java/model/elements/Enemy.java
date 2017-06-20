@@ -2,6 +2,14 @@ package model.elements;
 
 import model.Map;
 
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public class Enemy extends Living implements Moves {
 
 	private static String SPRITE = "enemy.png";
@@ -12,18 +20,16 @@ public class Enemy extends Living implements Moves {
 	}
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 * Put a Void when the wall is destructed
+	 * @param position
 	 */
 	public void destruction(int x, int y) {
 		Map.setOnTheMapXY(new Void(), x, y);
 	}
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 *	determine the behaviour of the element
+	 * @param postition and direction the move comes
 	 */
 	public void walkOver(int x, int y, char direction) {
 		death(x,y);

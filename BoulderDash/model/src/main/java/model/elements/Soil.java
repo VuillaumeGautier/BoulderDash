@@ -6,6 +6,5 @@ public class Soil extends Ground {
 
 	public Soil() {
 		super(SPRITE);
-
 	}
 }

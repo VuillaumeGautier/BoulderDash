@@ -2,26 +2,27 @@ package model.elements;
 
 import model.Map;
 
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
+
+
 public class Rock extends Motion implements Moves {
 
 	private static String SPRITE = "rock.png";
 
 	public Rock() {
 		super(SPRITE);
-
 	}
 
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
 
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * @param position and direction
 	 */
 	public void walkOver(int x, int y, char direction) {
 		
