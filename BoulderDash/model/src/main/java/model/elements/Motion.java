@@ -10,7 +10,7 @@ import model.Map;
  */
 
 
-public abstract class Motion extends Element {
+public abstract class Motion extends Element  implements Moves {
 
 	boolean movement;
 	
