@@ -2,12 +2,11 @@ package view;
 
 public class EventPerformer {
 
-	/**
-	 * 
-	 * @param keyCode
-	 */
-	public int keyCodeToUser(int keyCode) {
-		return 0;
+	private int keyUser;
+	
+	public int keyCodeToUser(int keyUser) 
+	{
+		return keyUser;
 	}
 
 }
