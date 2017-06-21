@@ -1,11 +1,10 @@
 package main;
 
-import view.*;
-
 import java.sql.SQLException;
 
 import controller.BoulderDashController;
-import model.*;
+import model.BoulderDashModel;
+import view.BoulderDashView;
 
 /**
  * <h1>The Class Main.</h1>
