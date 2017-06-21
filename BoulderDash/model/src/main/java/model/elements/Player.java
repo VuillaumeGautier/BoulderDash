@@ -35,6 +35,7 @@ public class Player extends Living {
 	 */
 	public void death(int x, int y) {
 		Map.setLevelLost(true);
+		Map.setLevelEnded(true);
 	}
 	
 	
@@ -52,15 +53,15 @@ public class Player extends Living {
 		
 		switch (direction){
 			case 38:
-				//haut
+				moveUp(x, y);
 				break;
 			case 40:
-				//bas
+				moveDown(x, y);
 				break;
 			case 37:
-				//gauche
+				moveLeft(x, y);
 			case 39:
-				//droite
+				moveRight(x, y);
 				break;
 		}
 		
@@ -73,7 +74,7 @@ public class Player extends Living {
 	 * @param y
 	 */
 	public void moveUp(int x, int y) {
-		// TODO - implement Player.moveUp
+		walkOver(x,y-1,'u');
 
 	}
 
@@ -83,7 +84,7 @@ public class Player extends Living {
 	 * @param y
 	 */
 	public void moveDown(int x, int y) {
-		// TODO - implement Player.moveDown
+		walkOver(x,y+1,'d');
 
 	}
 
@@ -93,7 +94,7 @@ public class Player extends Living {
 	 * @param y
 	 */
 	public void moveLeft(int x, int y) {
-		// TODO - implement Player.moveLeft
+		walkOver(x-1,y,'l');
 
 	}
 
@@ -103,7 +104,7 @@ public class Player extends Living {
 	 * @param y
 	 */
 	public void moveRight(int x, int y) {
-		// TODO - implement Player.moveRight
+		walkOver(x+1,y,'r');
 
 	}
 

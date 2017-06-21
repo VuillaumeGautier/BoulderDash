@@ -48,6 +48,7 @@ public class Enemy extends Living implements Moves {
 			for(j=0; j<3;j++)
 			{
 				Map.getOnTheMapXY(x-1+j, y-1+i).destruction(x-1+j, y-1+i);
+				Map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
 			}
 		}
 	}
