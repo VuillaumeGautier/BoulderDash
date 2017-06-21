@@ -9,7 +9,7 @@ package model.elements;
 
 public class Border extends Element {
 
-	private static String SPRITE = "border.png";
+	private static String SPRITE = "BORDER.png";
 
 	public Border() {
 		super(SPRITE);

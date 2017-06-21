@@ -12,7 +12,7 @@ import model.Map;
 
 public class Enemy extends Living implements Moves {
 
-	private static String SPRITE = "enemy.png";
+	private static String SPRITE = "ENEMY.png";
 	private char direction = 'r';
 
 	public Enemy() {
@@ -83,7 +83,7 @@ public class Enemy extends Living implements Moves {
 	}
 
 	public boolean freePlace(int x, int y){
-		if(Map.getOnTheMapXY(x, y).getSprite()=="Void.png" || Map.getOnTheMapXY(x, y).getSprite()=="Player.png"){
+		if(Map.getOnTheMapXY(x, y).getSprite()=="VOID.png" || Map.getOnTheMapXY(x, y).getSprite()=="PLAYER.png"){
 			return true;
 		}
 		else {

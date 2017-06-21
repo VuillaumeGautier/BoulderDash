@@ -12,7 +12,7 @@ import model.Map;
 
 public class Rock extends Motion {
 
-	private static String SPRITE = "rock.png";
+	private static String SPRITE = "ROCK.png";
 
 	public Rock() {
 		super(SPRITE);

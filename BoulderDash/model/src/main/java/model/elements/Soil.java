@@ -9,7 +9,7 @@ package model.elements;
 
 public class Soil extends Ground {
 
-	private static String SPRITE = "soil.png";
+	private static String SPRITE = "SOIL.png";
 
 	public Soil() {
 		super(SPRITE);

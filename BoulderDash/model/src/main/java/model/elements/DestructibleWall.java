@@ -11,7 +11,7 @@ import model.Map;
 
 public class DestructibleWall extends Element {
 
-	private static String SPRITE = "destructibleWall.png";
+	private static String SPRITE = "DESTRUCTIBLEWALL.png";
 
 	public DestructibleWall() {
 		super(SPRITE);
