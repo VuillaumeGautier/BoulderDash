@@ -1,12 +1,13 @@
 package model;
 
+import java.sql.SQLException;
 
 public class BoulderDashModel {
 
 	private Map map;
 
-	public BoulderDashModel() {
-		// TODO - implement BoulderDashModel.BoulderDashModel
+	public BoulderDashModel() throws SQLException {
+		map = new Map();
 
 	}
 
@@ -23,13 +24,5 @@ public class BoulderDashModel {
 		this.map = map;
 	}
 
-	/**
-	 * Display message.
-	 * @param message the message
-	 */
-	public void displayMessage(String message) {
-		// TODO - implement BoulderDashModel.displayMessage
-
-	}
 
 }

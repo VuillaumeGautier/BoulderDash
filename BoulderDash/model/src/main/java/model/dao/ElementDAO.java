@@ -138,7 +138,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
-	public String getElement (int idLevel, int column, int row) throws SQLException{
+	public static String getElement (int idLevel, int column, int row) throws SQLException{
 		String element = "";
 		column =+ 1;
 		ArrayList<String> elementsRow = new ArrayList<String>(); 

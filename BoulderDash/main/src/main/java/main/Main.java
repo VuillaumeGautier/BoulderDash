@@ -1,6 +1,9 @@
 package main;
 
 import view.*;
+
+import java.sql.SQLException;
+
 import controller.BoulderDashController;
 import model.*;
 
@@ -15,8 +18,9 @@ public abstract class Main {
 	/**
 	 * The main method.
 	 * @param args the arguments
+	 * @throws SQLException 
 	 */
-	public static void main(final String[] args) {
+	public static void main(final String[] args) throws SQLException {
 		
 		BoulderDashModel model = new BoulderDashModel();
 		BoulderDashView view = new BoulderDashView();

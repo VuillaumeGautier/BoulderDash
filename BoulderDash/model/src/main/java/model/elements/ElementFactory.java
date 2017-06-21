@@ -27,7 +27,7 @@ public abstract class ElementFactory {
 	 *
 	 * @param tableSymbol
 	 */
-	public Element getFromTableSymbol(String fileSymbol) {
+	public static Element getFromTableSymbol(String fileSymbol) {
 		
 		for (final Element Element : elements) {
             if (Element.getSprite() == (fileSymbol+".png")) {

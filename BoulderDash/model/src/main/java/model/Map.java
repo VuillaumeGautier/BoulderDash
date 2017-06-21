@@ -1,6 +1,11 @@
 package model;
 
+import java.sql.SQLException;
+
 import model.IMap;
+import model.dao.ElementDAO;
+import model.dao.MetadataDAO;
+import model.elements.ElementFactory;
 
 public class Map implements IMap {
 
@@ -13,16 +18,34 @@ public class Map implements IMap {
 	private int doorY;
 	private static boolean levelEnded = false;
 	private static boolean levelLost = false;
+	public static int tableID = 1;
 
 	/**
 	 *
 	 * @param String
+	 * @throws SQLException 
 	 */
-	public Map( String tableName) {
-		// TODO - implement Map.Map
-
+	public Map() throws SQLException {
+		width=MetadataDAO.getMapMetadataWidth(tableID);
+		height=MetadataDAO.getMapMetadataHeight(tableID);
+		doorX=MetadataDAO.getMapMetadataDoorX(tableID);
+		doorY=MetadataDAO.getMapMetadataDoorY(tableID);
+		diamondsNeeded=MetadataDAO.getMapMetadataDiamondsNeeded(tableID);
+		fillOnTheMap();
+		
 	}
 
+	
+	public void fillOnTheMap() throws SQLException {
+		int x,y;
+		int ID = tableID;
+		for(y=0; y <height;y++){
+			for (x=0; x<width; x++){
+				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
+			}
+		}
+	}
+	
 	public int getWidth() {
 		return this.width;
 	}
@@ -47,10 +70,7 @@ public class Map implements IMap {
 		this.height = height;
 	}
 
-	public void fillOnTheMap() {
-		// TODO - implement Map.fillOnTheMap
 
-	}
 
 	/**
 	 *
@@ -121,7 +141,7 @@ public class Map implements IMap {
 	}
 
 	public void spawnDoor() {
-		// TODO - implement Map.spawnDoor
+		setOnTheMapXY(ElementFactory.getFromTableSymbol("DOOR"), doorX, doorY);
 
 	}
 
