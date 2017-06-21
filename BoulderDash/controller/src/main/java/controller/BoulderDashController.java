@@ -41,7 +41,7 @@ while (model.getMap().getLevelEnded() == false){
 			}
 			for(int y = 0 ; y == model.getMap().getHeight() - 1 ; y++){
 				for(int x = 0; x == model.getMap().getWidth() - 1  ; x++){
-					view.show(x, y, model.getMap().getOnTheMapXY(x, y).getSprite());
+					view.show(x, y, model.getMap().getOnTheMapXY(x, y).getSprite(),model.getMap().getDiamondsNeeded()-model.getMap().getDiamondsPicked() );
 					
 				}
 			}
