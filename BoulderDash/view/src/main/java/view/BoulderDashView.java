@@ -57,6 +57,8 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 		JPanel pan = new JPanel();
 		this.setContentPane(pan);
 		this.setContentPane(new GamePanel(sprite, width, height,  score)); 
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		System.out.println(sprite);
 	}
 	
 	
