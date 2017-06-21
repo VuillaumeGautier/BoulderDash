@@ -58,6 +58,7 @@ public class MetadataDAO extends AbstractDAO {
 	 * @return the width of the map
 	 * @throws SQLException the SQL exception
 	 */
+	
 	public static int getMapMetadataWidth(final int idLevel) throws java.sql.SQLException {
 		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataWidth);
 		int width = 0;
