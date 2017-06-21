@@ -21,25 +21,25 @@ public class Enemy extends Living implements Moves {
 	}
 
 	/**
-	 * Put a Void when the wall is destructed
-	 * @param position
+	 * Kill the enemy when it is destroyed
+	 * @param position and map pointer
+	 *
 	 */
 	public void destruction(int x, int y, Map map) {
 		map.setOnTheMapXY(new Void(), x, y);
 	}
 
-	/**
-	 *	determine the behaviour of the element
-	 * @param postition and direction the move comes
-	 */
+	
+	
+
 	public void walkOver(int x, int y, char direction, Map map) {
 		death(x,y, map);
 	}
 
 	/**
+	 * Explode when the enemy dies
+	 * @param position and map pointer
 	 *
-	 * @param x
-	 * @param y
 	 */
 	public void death(int x, int y, Map map) {
 		int i,j;
@@ -54,9 +54,8 @@ public class Enemy extends Living implements Moves {
 	}
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 *	determine the behavior of the enemy
+	 * @param postition, direction the move comes and the map pointer
 	 */
 	public void move(int x, int y,int direction, Map map) {
 		switch (this.direction){

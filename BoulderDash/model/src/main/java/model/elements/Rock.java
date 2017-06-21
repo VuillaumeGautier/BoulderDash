@@ -10,7 +10,7 @@ import model.Map;
  */
 
 
-public class Rock extends Motion {
+public class Rock extends Motion implements Moves {
 
 	private static String SPRITE = "ROCK.png";
 
@@ -21,8 +21,8 @@ public class Rock extends Motion {
 
 
 	/**
-	 *
-	 * @param position and direction
+	 * Determine the push of the rock
+	 * @param position, direction and map pointer
 	 */
 	public void walkOver(int x, int y, char direction,Map map) {
 
@@ -44,43 +44,6 @@ public class Rock extends Motion {
 			break;
 			
 		}
-		
 	}
-
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
-	public void moveUp(int x, int y,Map map) {
-		//void
-	}
-
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
-	public void moveDown(int x, int y,Map map) {
-
-	}
-
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
-	public void moveLeft(int x, int y,Map map) {
-
-	}
-
-	/**
-	 *
-	 * @param x
-	 * @param y
-	 */
-	public void moveRight(int x, int y,Map map) {
-
-	}
-
+	
 }

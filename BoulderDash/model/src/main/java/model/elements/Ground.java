@@ -10,7 +10,7 @@ import model.Map;
  */
 
 
-public class Ground extends Element {
+public abstract class  Ground extends Element {
 
 	public Ground(String sprite) {
 		super(sprite);
@@ -41,10 +41,9 @@ public class Ground extends Element {
 		
 	}
 	/**
+	 * Put a Void when a ground element is destroyed
+	 * @param position and map pointer
 	 *
-	 * Put a Void when the wall is destructed
-	 * @param position
-	
 	 */
 	public void destruction(int x, int y,Map map) {
 		map.setOnTheMapXY(new Void(), x, y);

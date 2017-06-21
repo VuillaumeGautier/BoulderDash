@@ -38,30 +38,33 @@ public class Player extends Living {
 		map.setLevelEnded(true);
 	}
 	
+	/**
+	 * Determine the action when you walk on the Diamond
+	 * @param position, direction of the object which launched the method and map pointer
+	 */
 	
-	
-	public void walkOver(int x, int y, char direction){
-		
+	public void walkOver(int x, int y, char direction,Map map){
+		death(x, y, map);
 		
 	}
 
 	/**
-	 *
-	 * @param direction
+	 * Determine where the player must launch the walkOver
+	 * @param position, direction from the view (keyCode) and map pointer
 	 */
-	public void move(int x, int y,int direction) {
+	public void move(int x, int y,int direction,Map map) {
 		
 		switch (direction){
 			case 38:
-				moveUp(x, y);
+				moveUp(x, y,map);
 				break;
 			case 40:
-				moveDown(x, y);
+				moveDown(x, y,map);
 				break;
 			case 37:
-				moveLeft(x, y);
+				moveLeft(x, y,map);
 			case 39:
-				moveRight(x, y);
+				moveRight(x, y,map);
 				break;
 		}
 		
@@ -70,41 +73,41 @@ public class Player extends Living {
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * Launch the move to the up
+	 * @param position and map pointer
 	 */
-	public void moveUp(int x, int y) {
-		walkOver(x,y-1,'u');
+	public void moveUp(int x, int y,Map map) {
+		map.getOnTheMapXY(x, y-1).walkOver(x,y,'u',map);
 
 	}
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * Launch the move to the down
+	 * @param position and map pointer
 	 */
-	public void moveDown(int x, int y) {
-		walkOver(x,y+1,'d');
+	public void moveDown(int x, int y,Map map) {
+		map.getOnTheMapXY(x, y+1).walkOver(x,y,'d',map);
 
 	}
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * Launch the move to the left
+	 * @param position and map pointer
 	 */
-	public void moveLeft(int x, int y) {
-		walkOver(x-1,y,'l');
+	public void moveLeft(int x, int y,Map map) {
+		map.getOnTheMapXY(x-1, y).walkOver(x,y,'l',map);
 
 	}
 
 	/**
 	 *
-	 * @param x
-	 * @param y
+	 * Launch the move to the right
+	 * @param position and map pointer
 	 */
-	public void moveRight(int x, int y) {
-		walkOver(x+1,y,'r');
+	public void moveRight(int x, int y,Map map) {
+		map.getOnTheMapXY(x+1, y).walkOver(x,y,'r',map);
 
 	}
 

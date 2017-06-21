@@ -19,7 +19,7 @@ public class DestructibleWall extends Element {
 
 	/**
 	 * Put a Void when the wall is destructed
-	 * @param position
+	 * @param position and map pointer
 	 *
 	 */
 	public void destruction(int x, int y, Map map) {
