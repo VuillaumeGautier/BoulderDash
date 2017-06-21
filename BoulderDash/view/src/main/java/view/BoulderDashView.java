@@ -34,7 +34,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 		this.setTitle("Boulderdash");
 		this.setSize(x, y);
 		this.setLocationRelativeTo(null);
-		this.setResizable(false);
+		this.setResizable(false);    //block windows size
 		this.setVisible(true);
 		
 		
