@@ -34,7 +34,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the elements of a row in map of lv1
-	 * @param column the name
+	 * @param row needed
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
@@ -58,7 +58,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the elements of a row in map of lv2
-	 * @param column the name
+	 * @param row needed
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
@@ -81,7 +81,7 @@ public abstract class ElementDAO extends AbstractDAO {
 
 	/**
 	 * Gets the elements of a row in map of lv3
-	 * @param column the name
+	 * @param row needed
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
@@ -104,7 +104,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the elements of a row in map of lv4
-	 * @param column the name
+	 * @param row needed
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
@@ -127,7 +127,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the elements of a row in map of lv5
-	 * @param column the name
+	 * @param row needed
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
@@ -150,7 +150,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the list of elements of a row and return the element of a column of the row
-	 * @param idLevel,row index, column index
+	 * @param idLevel,row , column 
 	 * @return  the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */

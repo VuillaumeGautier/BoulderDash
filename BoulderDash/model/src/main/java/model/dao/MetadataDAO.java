@@ -34,8 +34,8 @@ public abstract class MetadataDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the height of the map
-	 * @param idLevel the id
-	 * @return the height
+	 * @param idLevel 
+	 * @return the height of the map
 	 * @throws SQLException the SQL exception
 	 */
 	public static int getMapMetadataHeight(final int idLevel) throws SQLException {
@@ -56,7 +56,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the width of the map
-	 * @param idLevel the id
+	 * @param idLevel
 	 * @return the width of the map
 	 * @throws SQLException the SQL exception
 	 */
@@ -79,8 +79,8 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the diamonds needed on the map
-	 * @param idLevel the id
-	 * @return the diamonds needed
+	 * @param idLevel
+	 * @return the diamonds needed to finished the level
 	 * @throws SQLException the SQL exception
 	 */
 	public static int getMapMetadataDiamondsNeeded(final int idLevel) throws SQLException {
@@ -101,7 +101,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the door X coordinate of the map
-	 * @param idLevel the id
+	 * @param idLevel
 	 * @return  the door X coordinate
 	 * @throws SQLException the SQL exception
 	 */
@@ -123,7 +123,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the door Y coordinate of the map
-	 * @param idLevel the id
+	 * @param idLevel
 	 * @return the the door Y
 	 * @throws SQLException the SQL exception
 	 */
