@@ -36,7 +36,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);    //block windows size
 		this.setVisible(true);
-		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		System.out.println(x);
 		System.out.println(y);
 		

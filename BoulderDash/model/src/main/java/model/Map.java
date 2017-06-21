@@ -31,6 +31,7 @@ public class Map implements IMap {
 		doorX=MetadataDAO.getMapMetadataDoorX(tableID);
 		doorY=MetadataDAO.getMapMetadataDoorY(tableID);
 		diamondsNeeded=MetadataDAO.getMapMetadataDiamondsNeeded(tableID);
+		this.onTheMap = new model.elements.Element[width][height];
 		fillOnTheMap();
 		
 	}

@@ -23,22 +23,25 @@ public class BoulderDashController implements contract.IController {
 		// TODO - implement BoulderDashController.play
 		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
 		while (model.getMap().getLevelEnded() == false){
-			try {
+			
+			/*try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			for(int y = model.getMap().getHeight() - 1 ; y == 0 ; y--){
-				for(int x = 0; x == model.getMap().getWidth() - 1  ; x++){
-					if (model.getMap().getOnTheMapXY(x, y).getSprite() == "player.png"){
+			}*/
+			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
+				for(int x = 0; x < model.getMap().getWidth()  ; x++){
+					System.out.println(x);
+					System.out.println(y);
+					if (model.getMap().getOnTheMapXY(x, y).getSprite() == "PLAYER.png"){
 						model.getMap().getOnTheMapXY(x, y).move(x, y, view.KeyUser(), model.getMap() );
 					}
 					else {
 						model.getMap().getOnTheMapXY(x, y).move(x, y ,0 , model.getMap());
 					}
 					if (model.getMap().getDiamondsNeeded() == model.getMap().getDiamondsPicked() ){
-						if (model.getMap().getOnTheMapXY( model.getMap().getDoorX(),model.getMap().getDoorY()).getSprite() =="player.png")  {
+						if (model.getMap().getOnTheMapXY( model.getMap().getDoorX(),model.getMap().getDoorY()).getSprite() =="PLAYER.png")  {
 							model.getMap().setLevelEnded(true );
 						}
 						model.getMap().spawnDoor();
@@ -48,9 +51,11 @@ public class BoulderDashController implements contract.IController {
 				}
 				
 			}
-			for(int y = 0 ; y == model.getMap().getHeight() - 1 ; y++){
-				for(int x = 0; x == model.getMap().getWidth() - 1  ; x++){
+			
+			for(int y = 0 ; y < model.getMap().getHeight() ; y++){
+				for(int x = 0; x < model.getMap().getWidth()  ; x++){
 					view.showPanel(x, y, model.getMap().getOnTheMapXY(x, y).getSprite(),model.getMap().getDiamondsNeeded()-model.getMap().getDiamondsPicked() );
+					
 					
 				}
 			}
