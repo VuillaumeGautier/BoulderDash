@@ -1,5 +1,7 @@
 package model.elements;
 
+
+
 /**
  * <h1>The Class MetadataDAO.</h1>
  * 
@@ -25,9 +27,15 @@ public abstract class ElementFactory {
 	 *
 	 * @param tableSymbol
 	 */
-	public Element getFromTableSymbol(String table) {
+	public Element getFromTableSymbol(String fileSymbol) {
 		
-		return Void;
+		for (final Element Element : elements) {
+            if (Element.getSprite() == (fileSymbol+".png")) {
+                return Element;
+            }
+        }
+        return Void;
+    
 	}
 
 }
