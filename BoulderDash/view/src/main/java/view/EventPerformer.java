@@ -13,13 +13,13 @@ public class EventPerformer extends JFrame
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int keyUser;
+	//private int keyUser;
 	
 	public void keyCodeToUser() 
 	{
 		
 		//super("keyCodeToUser");
-		JLabel label = new JLabel("tape pour test");
+		JLabel label = new JLabel("tape pour test");  
         add(label, BorderLayout.CENTER);
 
         // ajoute un écouteur d'événements personnalisé à la fenêtre
@@ -34,12 +34,12 @@ public class EventPerformer extends JFrame
 
 	
 	//================================================================
-	public int getKeyUser() {
+	/*public int getKeyUser() {
 		return keyUser;
 	}
 
 	public void setKeyUser(int keyUser) {
 		this.keyUser = keyUser;
-	}
+	}*/
 
 }

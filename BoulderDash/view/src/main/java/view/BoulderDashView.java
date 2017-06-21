@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 /*import view.GamePanel; 
 import view.GameOver;
 import view.Success;*/
-import view.keyControler;
+import view.keyControler; 
 
 
 public class BoulderDashView extends JFrame implements contract.IView  {

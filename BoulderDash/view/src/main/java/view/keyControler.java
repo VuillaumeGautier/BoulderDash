@@ -17,7 +17,7 @@ public class keyControler implements KeyListener {
  
     public void keyPressed(KeyEvent e) {
        keyUser = e.getKeyCode();
-    }
+    }   
  
     public void keyReleased(KeyEvent e) {
     }   

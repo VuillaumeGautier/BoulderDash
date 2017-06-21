@@ -16,7 +16,7 @@ public class Success extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final Image NULL = null;
+	private static final Image NULL = null;  
 
 	public Success(Graphics g )  
 	{

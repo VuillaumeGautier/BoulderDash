@@ -19,7 +19,7 @@ public class GamePanel extends JPanel{
 
 	public GamePanel(String  spriteName, int spriteX , int spriteY ,Graphics g ) 
 	{
-		
+		  
 		String adress = "/boulderdash/sprites/";
 		String adresseSprite = adress + spriteName; 
 		
