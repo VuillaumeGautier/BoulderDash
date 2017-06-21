@@ -40,6 +40,8 @@ public class GamePanel extends JPanel{
 		g.drawImage(img,spriteX*16,spriteY*16, this);
 		g.drawString(messageScore , 0 , 650);
 		
+		
+		System.out.println(adresseSprite);
 	}
 
 	
