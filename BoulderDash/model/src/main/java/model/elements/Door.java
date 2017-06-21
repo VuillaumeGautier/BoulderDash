@@ -12,7 +12,7 @@ import model.Map;
 
 public class Door extends Element {
 
-	private static String SPRITE = "door.png";
+	private static String SPRITE = "DOOR.png";
 
 	public Door() {
 		super(SPRITE);

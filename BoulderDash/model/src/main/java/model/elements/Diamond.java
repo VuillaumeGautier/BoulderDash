@@ -12,7 +12,7 @@ import model.Map;
 
 public class Diamond extends Motion implements Moves {
 
-	private static String SPRITE = "diamond.png";
+	private static String SPRITE = "DIAMOND.png";
 
 	public Diamond() {
 		super(SPRITE);

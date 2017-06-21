@@ -14,7 +14,7 @@ import model.Map;
 
 public class Player extends Living {
 
-	private static String SPRITE = "player.png";
+	private static String SPRITE = "PLAYER.png";
 
 	public Player() {
 		super(SPRITE);

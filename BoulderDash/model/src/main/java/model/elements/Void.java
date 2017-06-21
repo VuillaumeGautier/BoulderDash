@@ -9,7 +9,7 @@ package model.elements;
 
 public class Void extends Ground {
 
-	private static String SPRITE = "void.png";
+	private static String SPRITE = "VOID.png";
 
 	public Void() {
 		super(SPRITE);
