@@ -19,27 +19,52 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	private Success success;
 
 	
+	/**
+	 * windows creation
+	 * this methode is call once time by the controler 
+	 * @param int x, int y 
+	 * 		Size for window
+	 * @return void 
+	 * @author Julien
+	 */
+	
 	public void show(int x , int y)  
 	{	
 		
 		this.setTitle("Boulderdash");
 		this.setSize(x, y);
 		this.setLocationRelativeTo(null);
+		this.setResizable(false);
 		this.setVisible(true);
 		
 		
 		
 	}
 
+	
+	/**
+	 * Jpanel --> windows filling with image display
+	 * this method is called for each analyzed cases
+	 * @param int width, int height, String sprite,int score
+	 * 			sprite coordinates / sprite to show / needed diamonds to display 
+	 * @return void 
+	 * @see GamePanel
+	 * @author Julien 
+	 */
 	public void showPanel (int width, int height, String sprite,int score)
 	{
 		JPanel pan = new JPanel();
 		this.setContentPane(pan);
 		this.setContentPane(new GamePanel(sprite, width, height,  score)); 
 	}
+	
+	
 	/**
-	 * 
-	 * @param Score
+	 * windows creation for gameOver display  --> instincts JPanel with "gameOver" 
+	 * @param null
+	 * @return void
+	 * @see GameOver
+	 * @author Julien 
 	 */
 
 
@@ -60,6 +85,15 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	}
 
 	
+
+	/**
+	 * windows creation for Victory display  --> instincts JPanel with "Victory" 
+	 * @param null
+	 * @return void
+	 * @see Success
+	 * @author Julien 
+	 */
+	
 	public void displaySuccess() {
 		
 		
@@ -74,7 +108,13 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	    this.setContentPane(new Success(null));
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-	
+
+/**
+ * methode for controler can have keyUser value 
+ * @param null
+ * @return int 
+ * @see  
+ */
 	
 	public int KeyUser()
 	{
