@@ -76,4 +76,9 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
+	
+	public int KeyUser()
+	{
+		return keyControler.getKeyUser();
+	}
 }
