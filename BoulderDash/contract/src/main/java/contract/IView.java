@@ -22,4 +22,6 @@ public interface IView {
 	 */
 	void displayScore(int Score);
 
+	void displaySuccess();
+
 }

@@ -2,8 +2,10 @@ package view;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import view.GamePanel; 
+/*import view.GamePanel; 
 import view.GameOver;
+import view.Success;*/
+import view.keyControler;
 
 
 public class BoulderDashView extends JFrame implements contract.IView  {
@@ -13,7 +15,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 
 	private GamePanel gamePanel;
 	private GameOver gameOver;
-	
+	private Success success;
 
 	
 	public void show(int x, int y, String sprite)  
@@ -59,5 +61,19 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	}
 
 	
-
+	public void displaySuccess() {
+		
+		
+		this.setTitle("Boulderdash");
+		this.setSize(640, 640);
+		this.setVisible(true);
+		
+		JPanel panOver = new JPanel();
+		this.setContentPane(panOver);
+		this.setLocationRelativeTo(null);
+	   
+	    this.setContentPane(new Success(null));
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
 }
