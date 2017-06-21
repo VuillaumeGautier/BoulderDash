@@ -13,7 +13,8 @@ public class BoulderDashController implements contract.IController {
 
 	public void play() {
 		// TODO - implement BoulderDashController.play
-while (model.getMap().getLevelEnded() == false){
+		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
+		while (model.getMap().getLevelEnded() == false){
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
@@ -32,7 +33,7 @@ while (model.getMap().getLevelEnded() == false){
 						if (model.getMap().getOnTheMapXY( model.getMap().getDoorX(),model.getMap().getDoorY()).getSprite() =="player.png")  {
 							model.getMap().setLevelEnded(true );
 						}
-						model.getMap().setOnTheMapXY(new model.elements.Door(), model.getMap().getDoorX(),model.getMap().getDoorX());
+						model.getMap().spawnDoor();
 						
 						
 					}
@@ -41,7 +42,7 @@ while (model.getMap().getLevelEnded() == false){
 			}
 			for(int y = 0 ; y == model.getMap().getHeight() - 1 ; y++){
 				for(int x = 0; x == model.getMap().getWidth() - 1  ; x++){
-					view.show(x, y, model.getMap().getOnTheMapXY(x, y).getSprite(),model.getMap().getDiamondsNeeded()-model.getMap().getDiamondsPicked() );
+					view.showPanel(x, y, model.getMap().getOnTheMapXY(x, y).getSprite(),model.getMap().getDiamondsNeeded()-model.getMap().getDiamondsPicked() );
 					
 				}
 			}
