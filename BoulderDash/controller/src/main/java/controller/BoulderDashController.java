@@ -3,14 +3,22 @@ package controller;
 import model.* ;
 import view.BoulderDashView; 
 
-
+/**
+ * Controller
+ * @author Emmanuel BOUSSER
+ * 
+ */
 public class BoulderDashController implements contract.IController {
 
 	private BoulderDashModel model;
 	private BoulderDashView view;
 	public static int frameRate = 500;
 	
-
+	/**
+	 * check and refrech loop
+	 * @author Emmanuel BOUSSER
+	 * 
+	 */
 	public void play() {
 		// TODO - implement BoulderDashController.play
 		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
@@ -24,10 +32,10 @@ public class BoulderDashController implements contract.IController {
 			for(int y = model.getMap().getHeight() - 1 ; y == 0 ; y--){
 				for(int x = 0; x == model.getMap().getWidth() - 1  ; x++){
 					if (model.getMap().getOnTheMapXY(x, y).getSprite() == "player.png"){
-						model.getMap().getOnTheMapXY(x, y).move(x, y, view.KeyUser() );
+						model.getMap().getOnTheMapXY(x, y).move(x, y, view.KeyUser(), model.getMap() );
 					}
 					else {
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,0);
+						model.getMap().getOnTheMapXY(x, y).move(x, y ,0 , model.getMap());
 					}
 					if (model.getMap().getDiamondsNeeded() == model.getMap().getDiamondsPicked() ){
 						if (model.getMap().getOnTheMapXY( model.getMap().getDoorX(),model.getMap().getDoorY()).getSprite() =="player.png")  {
