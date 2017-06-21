@@ -43,7 +43,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	}
 
 	@Override
-	public void displayGameOver(java.lang.String messageGameOver) {
+	public void displayGameOver() {
 		
 		
 		this.setTitle("Boulderdash");
