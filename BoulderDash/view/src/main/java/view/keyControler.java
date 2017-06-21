@@ -20,6 +20,7 @@ public class keyControler implements KeyListener {
     }   
  
     public void keyReleased(KeyEvent e) {
+    	keyUser = 0;
     }   
  
     public void keyTyped(KeyEvent e) {
