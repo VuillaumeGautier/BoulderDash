@@ -15,27 +15,27 @@ public interface Moves {
 	 * @param x
 	 * @param y
 	 */
-	void moveUp(int x, int y);
+	void moveUp(int x, int y,model.Map map);
 
 	/**
 	 *
 	 * @param x
 	 * @param y
 	 */
-	void moveDown(int x, int y);
+	void moveDown(int x, int y,model.Map map);
 
 	/**
 	 *
 	 * @param x
 	 * @param y
 	 */
-	void moveLeft(int x, int y);
+	void moveLeft(int x, int y,model.Map map);
 
 	/**
 	 *
 	 * @param x
 	 * @param y
 	 */
-	void moveRight(int x, int y);
+	void moveRight(int x, int y,model.Map map);
 
 }

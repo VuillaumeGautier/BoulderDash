@@ -24,8 +24,8 @@ public class Diamond extends Motion implements Moves {
 	 * Put a Void when the wall is destructed
 	 * @param position
 	 */
-	public void destruction(int x, int y) {
-		Map.setOnTheMapXY(new Void(), x, y);
+	public void destruction(int x, int y, Map map) {
+		map.setOnTheMapXY(new Void(), x, y);
 	}
 
 	/**
@@ -33,22 +33,22 @@ public class Diamond extends Motion implements Moves {
 	 * @param x
 	 * @param y
 	 */
-	public void walkOver(int x, int y, char direction) {
-		Map.setDiamondsPicked(Map.getDiamondsPicked() + 1);
-		Map.setOnTheMapXY(new Player(), x, y);
+	public void walkOver(int x, int y, char direction, Map map) {
+		map.setDiamondsPicked(map.getDiamondsPicked() + 1);
+		map.setOnTheMapXY(new Player(), x, y);
 		
 		switch (direction){
 			case 'u':
-				Map.setOnTheMapXY(new Void(), x, y+1);
+				map.setOnTheMapXY(new Void(), x, y+1);
 				break;
 			case 'd':
-				Map.setOnTheMapXY(new Void(), x, y-1);
+				map.setOnTheMapXY(new Void(), x, y-1);
 				break;
 			case 'l':
-				Map.setOnTheMapXY(new Void(), x+1, y);
+				map.setOnTheMapXY(new Void(), x+1, y);
 				break;
 			case 'r':
-				Map.setOnTheMapXY(new Void(), x-1, y);
+				map.setOnTheMapXY(new Void(), x-1, y);
 				break;
 			
 		}
@@ -59,7 +59,7 @@ public class Diamond extends Motion implements Moves {
 	 *
 	 * @param position
 	 */
-	public void moveUp(int x, int y) {
+	public void moveUp(int x, int y, Map map) {
 		//void
 	}
 
@@ -68,8 +68,8 @@ public class Diamond extends Motion implements Moves {
 	 * @param x
 	 * @param y
 	 */
-	public void moveDown(int x, int y) {
-		Map.getOnTheMapXY(x, y-1).walkOver(x, y, 'd');
+	public void moveDown(int x, int y, Map map) {
+		map.getOnTheMapXY(x, y-1).walkOver(x, y, 'd',map);
 		
 	}
 
@@ -78,8 +78,8 @@ public class Diamond extends Motion implements Moves {
 	 * @param x
 	 * @param y
 	 */
-	public void moveLeft(int x, int y) {
-		Map.getOnTheMapXY(x, y-1).walkOver(x, y, 'l');
+	public void moveLeft(int x, int y, Map map) {
+		map.getOnTheMapXY(x, y-1).walkOver(x, y, 'l', map);
 	}
 
 	/**
@@ -87,8 +87,8 @@ public class Diamond extends Motion implements Moves {
 	 * @param x
 	 * @param y
 	 */
-	public void moveRight(int x, int y) {
-		Map.getOnTheMapXY(x, y-1).walkOver(x, y, 'r');
+	public void moveRight(int x, int y, Map map) {
+		map.getOnTheMapXY(x, y-1).walkOver(x, y, 'r',map);
 	}
 
 }

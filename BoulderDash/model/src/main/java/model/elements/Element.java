@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.Map;
+
 /**
  * <h1>The Class MetadataDAO.</h1>
  * 
@@ -30,7 +32,7 @@ public abstract class Element implements IElement{
 	 * @param x
 	 * @param y
 	 */
-	public void destruction(int x, int y) {
+	public void destruction(int x, int y, Map map) {
 
 	}
 
@@ -39,7 +41,7 @@ public abstract class Element implements IElement{
 	 * @param x
 	 * @param y
 	 */
-	public void walkOver(int x, int y, char direction) {
+	public void walkOver(int x, int y, char direction, Map map) {
 
 	}
 
@@ -48,7 +50,7 @@ public abstract class Element implements IElement{
 	 * @param x
 	 * @param y
 	 */
-	public void move(int x, int y, int direction) {
+	public void move(int x, int y, int direction, Map map) {
 
 	}
 

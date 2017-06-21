@@ -24,8 +24,8 @@ public class Door extends Element {
 	 * @param x
 	 * @param y
 	 */
-	public void walkOver(int x, int y, char direction) {
-		Map.setLevelEnded(true);
+	public void walkOver(int x, int y, char direction, Map map) {
+		map.setLevelEnded(true);
 	}
 
 }

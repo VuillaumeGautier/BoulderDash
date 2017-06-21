@@ -24,23 +24,22 @@ public class Rock extends Motion {
 	 *
 	 * @param position and direction
 	 */
-	public void walkOver(int x, int y, char direction) {
+	public void walkOver(int x, int y, char direction,Map map) {
 
 		
 		
 		switch (direction){
 		
 		case 'l':
-			if(Map.getOnTheMapXY(x-1, y+1).getSprite()!="VOID.png" && Map.getOnTheMapXY(x-2, y).getSprite()=="VOID.png"){
-			Map.getOnTheMapXY(x-2, y).walkOver(x-1, y, direction);
-			Map.getOnTheMapXY(x-1, y).walkOver(x, y, direction);
+			if(map.getOnTheMapXY(x-1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x-2, y).getSprite()=="VOID.png"){
+			map.getOnTheMapXY(x-2, y).walkOver(x-1, y, direction,map);
+			map.getOnTheMapXY(x-1, y).walkOver(x, y, direction,map);
 			}
 			break;
 			
 		case 'r':
-			if(Map.getOnTheMapXY(x+1, y+1).getSprite()!="VOID.png" && Map.getOnTheMapXY(x+2, y).getSprite()=="VOID.png"){
-				Map.getOnTheMapXY(x+2, y).walkOver(x+1, y, direction);
-				Map.getOnTheMapXY(x+1, y).walkOver(x, y, direction);
+			if(map.getOnTheMapXY(x+1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x+2, y).getSprite()=="VOID.png"){
+				map.getOnTheMapXY(x+2, y).walkOver(x+1, y, direction,map);
 				}
 			break;
 			
@@ -53,7 +52,7 @@ public class Rock extends Motion {
 	 * @param x
 	 * @param y
 	 */
-	public void moveUp(int x, int y) {
+	public void moveUp(int x, int y,Map map) {
 		//void
 	}
 
@@ -62,7 +61,7 @@ public class Rock extends Motion {
 	 * @param x
 	 * @param y
 	 */
-	public void moveDown(int x, int y) {
+	public void moveDown(int x, int y,Map map) {
 
 	}
 
@@ -71,7 +70,7 @@ public class Rock extends Motion {
 	 * @param x
 	 * @param y
 	 */
-	public void moveLeft(int x, int y) {
+	public void moveLeft(int x, int y,Map map) {
 
 	}
 
@@ -80,7 +79,7 @@ public class Rock extends Motion {
 	 * @param x
 	 * @param y
 	 */
-	public void moveRight(int x, int y) {
+	public void moveRight(int x, int y,Map map) {
 
 	}
 

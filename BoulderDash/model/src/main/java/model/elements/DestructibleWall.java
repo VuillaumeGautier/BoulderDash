@@ -22,7 +22,7 @@ public class DestructibleWall extends Element {
 	 * @param position
 	 *
 	 */
-	public void destruction(int x, int y) {
-		Map.setOnTheMapXY(new Void(), x, y);
+	public void destruction(int x, int y, Map map) {
+		map.setOnTheMapXY(new Void(), x, y);
 	}
 }

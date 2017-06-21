@@ -25,17 +25,17 @@ public class Player extends Living {
 	 * Launch the death of the player
 	 * @param position
 	 */
-	public void destruction(int x, int y) {
-		death(x, y);
+	public void destruction(int x, int y,Map map) {
+		death(x, y,map);
 	}
 
 	/**
 	 * Set the map as "lost", so the controller can get the game is lost
 	 * @param position
 	 */
-	public void death(int x, int y) {
-		Map.setLevelLost(true);
-		Map.setLevelEnded(true);
+	public void death(int x, int y,Map map) {
+		map.setLevelLost(true);
+		map.setLevelEnded(true);
 	}
 	
 	

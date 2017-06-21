@@ -11,14 +11,14 @@ public class Map implements IMap {
 
 	private int width;
 	private int height;
-	private static model.elements.Element[][] onTheMap;
-	private static int diamondsPicked = 0;
+	private model.elements.Element[][] onTheMap;
+	private int diamondsPicked = 0;
 	private int diamondsNeeded;
 	private int doorX;
 	private int doorY;
-	private static boolean levelEnded = false;
-	private static boolean levelLost = false;
-	public static int tableID = 1;
+	private boolean levelEnded = false;
+	private boolean levelLost = false;
+	public int tableID = 1;
 
 	/**
 	 *
@@ -77,7 +77,7 @@ public class Map implements IMap {
 	 * @param x
 	 * @param y
 	 */
-	public static model.elements.Element getOnTheMapXY(int x, int y) {
+	public model.elements.Element getOnTheMapXY(int x, int y) {
 
 		return onTheMap[x][y];
 	}
@@ -88,7 +88,7 @@ public class Map implements IMap {
 	 * @param x
 	 * @param y
 	 */
-	public static void setOnTheMapXY(model.elements.Element element, int x, int y) {
+	public void setOnTheMapXY(model.elements.Element element, int x, int y) {
 
 	}
 
@@ -128,16 +128,16 @@ public class Map implements IMap {
 		this.diamondsNeeded = diamondsNeeded;
 	}
 
-	public static int getDiamondsPicked() {
-		return Map.diamondsPicked;
+	public int getDiamondsPicked() {
+		return diamondsPicked;
 	}
 
 	/**
 	 *
 	 * @param diamondsPicked
 	 */
-	public static void setDiamondsPicked(int diamondsPicked) {
-		Map.diamondsPicked = diamondsPicked;
+	public void setDiamondsPicked(int diamondsPicked) {
+		this.diamondsPicked = diamondsPicked;
 	}
 
 	public void spawnDoor() {
@@ -145,20 +145,20 @@ public class Map implements IMap {
 
 	}
 
-	public static boolean getLevelEnded() {
+	public boolean getLevelEnded() {
 		return levelEnded;
 	}
 
-	public static void setLevelEnded(boolean levelEnded) {
-		Map.levelEnded = levelEnded;
+	public void setLevelEnded(boolean levelEnded) {
+		this.levelEnded = levelEnded;
 	}
 
-	public static boolean getLevelLost() {
+	public boolean getLevelLost() {
 		return levelLost;
 	}
 
-	public static void setLevelLost(boolean levelLost) {
-		Map.levelLost = levelLost;
+	public void setLevelLost(boolean levelLost) {
+			this.levelLost = levelLost;
 	}
 
 }

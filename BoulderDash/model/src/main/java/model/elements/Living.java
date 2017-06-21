@@ -20,7 +20,7 @@ public abstract class Living extends Element {
 	 * @param x
 	 * @param y
 	 */
-	public void death(int x, int y) {
+	public void death(int x, int y,model.Map map) {
 	}
 
 }

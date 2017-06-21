@@ -17,20 +17,20 @@ public interface IElement {
 	 * @param x
 	 * @param y
 	 */
-	void destruction(int x, int y);
+	void destruction(int x, int y,model.Map map);
 
 	/**
 	 * 
 	 * @param x
 	 * @param y
 	 */
-	void walkOver(int x, int y,  char direction);
+	void walkOver(int x, int y,  char direction,model.Map map);
 
 	/**
 	 * 
 	 * @param x
 	 * @param y
 	 */
-	void move(int x, int y, int directio);
+	void move(int x, int y, int direction,model.Map map);
 
 }
