@@ -25,7 +25,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	 * @param int x, int y 
 	 * 		Size for window
 	 * @return void 
-	 * @author Julien
+	 * @author Julien  
 	 */
 	
 	public void show(int x , int y)  
