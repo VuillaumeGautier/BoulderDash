@@ -46,12 +46,13 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 0; i < 10; i++) {
+				for (int i = 1; i < 11; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 			}
 			result.close();
 		}
+		//System.out.println(elementsList);
 		return elementsList;
 	}
 	
@@ -69,7 +70,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 0; i < 15; i++) {
+				for (int i = 1; i < 16; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 			}
@@ -92,7 +93,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 0; i < 20; i++) {
+				for (int i = 1; i < 21; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 			}
@@ -115,7 +116,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 0; i < 30; i++) {
+				for (int i = 1; i < 31; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 				result.close();
@@ -138,7 +139,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 0; i < 40; i++) {
+				for (int i = 1; i < 41; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 				result.close();
@@ -154,8 +155,9 @@ public abstract class ElementDAO extends AbstractDAO {
 	 * @throws SQLException the SQL exception
 	 */
 	public static String getElement (int idLevel, int column, int row) throws SQLException{
+		//System.out.println(column);
 		String element = "";
-		column =+ 1;
+		//System.out.println(column);
 		ArrayList<String> elementsRow = new ArrayList<String>(); 
 		switch (idLevel){
 			case 1 : 
@@ -178,6 +180,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (column <= elementsRowSize){
 			element = elementsRow.get(column);
 		}
+		//System.out.println(element);
 		return element;
 	}
 	
