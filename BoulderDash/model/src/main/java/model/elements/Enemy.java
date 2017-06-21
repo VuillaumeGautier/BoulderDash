@@ -358,5 +358,6 @@ public class Enemy extends Living implements Moves {
 	}
 	
 
+	
 
 }
