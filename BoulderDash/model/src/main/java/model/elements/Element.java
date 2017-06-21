@@ -19,7 +19,7 @@ public abstract class Element implements IElement{
 	 * @param sprite
 	 */
 	public Element(String sprite) {
-		// TODO - implement Element.Element
+		this.sprite = sprite;
 
 	}
 

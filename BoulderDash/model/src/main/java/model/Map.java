@@ -42,7 +42,9 @@ public class Map implements IMap {
 		int ID = tableID;
 		for(y=0; y <height;y++){
 			for (x=0; x<width; x++){
+
 				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
+				
 			}
 		}
 	}
@@ -90,7 +92,7 @@ public class Map implements IMap {
 	 * @param y
 	 */
 	public void setOnTheMapXY(model.elements.Element element, int x, int y) {
-
+		this.onTheMap[x][y] = element;
 	}
 
 	public int getDoorY() {
