@@ -42,7 +42,6 @@ public class Map implements IMap {
 		int ID = tableID;
 		for(y=0; y <height;y++){
 			for (x=0; x<width; x++){
-
 				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
 				
 			}

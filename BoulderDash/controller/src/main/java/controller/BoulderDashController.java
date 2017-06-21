@@ -32,8 +32,7 @@ public class BoulderDashController implements contract.IController {
 			}*/
 			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
-					System.out.println(x);
-					System.out.println(y);
+					System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
 					if (model.getMap().getOnTheMapXY(x, y).getSprite() == "PLAYER.png"){
 						model.getMap().getOnTheMapXY(x, y).move(x, y, view.KeyUser(), model.getMap() );
 					}
