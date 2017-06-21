@@ -8,6 +8,7 @@ import view.Success;*/
 import view.keyControler; 
 
 
+
 public class BoulderDashView extends JFrame implements contract.IView  {
 
 	private static final long serialVersionUID = 1L;
@@ -18,31 +19,29 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	private Success success;
 
 	
-	public void show(int x, int y, String sprite)  
+	public void show(int x , int y)  
 	{	
 		
 		this.setTitle("Boulderdash");
 		this.setSize(x, y);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
-		JPanel pan = new JPanel();
-		this.setContentPane(pan);
-		this.setContentPane(new GamePanel(sprite, x, y, null)); 
+		
 		
 		
 	}
 
+	public void showPanel (int width, int height, String sprite,int score)
+	{
+		JPanel pan = new JPanel();
+		this.setContentPane(pan);
+		this.setContentPane(new GamePanel(sprite, width, height,  score)); 
+	}
 	/**
 	 * 
 	 * @param Score
 	 */
-	public void displayScore(int Score) {
-		
-		// TODO - implement BoulderDashView.displayScore
-		
-		
-		
-	}
+
 
 	@Override
 	public void displayGameOver() {

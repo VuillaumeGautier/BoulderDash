@@ -8,8 +8,8 @@ public interface IView {
 	 * @param y
 	 * @param sprite
 	 */
-	void show(int x, int y, String sprite);
-
+	void show(int x , int y);
+	void showPanel (int widht, int height, String sprite ,int score);
 	/**
 	 * 
 	 * @param messageGameOver
@@ -20,7 +20,7 @@ public interface IView {
 	 * 
 	 * @param Score
 	 */
-	void displayScore(int Score);
+	
 
 	void displaySuccess();
 
