@@ -1,7 +1,8 @@
 package contract;
 
+import java.io.IOException;
+
 public interface IController {
 
-	void play();
+	void play() throws IOException;
 
-}

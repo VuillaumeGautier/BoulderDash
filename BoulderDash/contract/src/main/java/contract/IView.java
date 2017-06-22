@@ -1,5 +1,7 @@
 package contract;
 
+import java.io.IOException;
+
 public interface IView {
 
 	/**
@@ -9,7 +11,7 @@ public interface IView {
 	 * @param sprite
 	 */
 	void show(int x , int y);
-	void showPanel (int widht, int height, String sprite ,int score);
+	void showPanel (int widht, int height, String sprite ,int score) throws IOException;
 	/**
 	 * 
 	 * @param messageGameOver

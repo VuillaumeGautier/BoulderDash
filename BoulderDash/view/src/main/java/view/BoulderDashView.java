@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Graphics;
 import java.io.IOException;
 
 import javax.swing.JFrame;
@@ -53,13 +54,19 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	 * @return void 
 	 * @see GamePanel
 	 * @author Julien 
-	 * @throws IOException 
 	 */
-	public void showPanel (int width, int height, String sprite,int score) throws IOException
+	public void showPanel (int width, int height, String sprite,int score)
 	{
-		JPanel pan = new JPanel();
-		this.setContentPane(pan);
-		this.setContentPane(new GamePanel(sprite, width, height,  score )); 
+		GamePanel pan;
+		try {
+			pan = new GamePanel(sprite, width, height,  score );
+			this.setContentPane(pan);
+			pan.paintComponentBefore(null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//System.out.println(sprite);
 	}

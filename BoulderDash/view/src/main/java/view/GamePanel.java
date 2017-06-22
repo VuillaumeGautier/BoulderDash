@@ -30,20 +30,25 @@ public class GamePanel extends JPanel{
 		this.score = score;
 	}
 	
+	public void paintComponentBefore(Graphics g){
+		paintComponent(g);
+		
+	}
+	
 	
 	@Override
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		String adress = "C:\\Users\\julie\\git\\BoulderDash\\BoulderDash\\sprites\\";
-		String adresseSprite = adress + spriteName; 
+		String adressSprite = adress + spriteName; 
 		//String adresseSprite = spriteName;
 		String message = "diamond needed : " ;
 		String messageScore = message + score;
 		System.out.println("yo");
 		//Image img = NULL;
 		try {
-			 System.out.println(adresseSprite);
-			 File OpenSprite = new File(adresseSprite);
+			 System.out.println(adressSprite);
+			 File OpenSprite = new File(adressSprite);
 			 
 			 Image image = ImageIO.read(OpenSprite);
 			 g.drawImage(image,spriteX*16,spriteY*16, this);
