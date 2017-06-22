@@ -1,6 +1,21 @@
 package view;
 
 import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JPanel;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +35,9 @@ public class GamePanel extends JPanel{
 	private int spriteX;
 	private int spriteY;
 	private int score;
-//	private static final Image NULL = null; 
+	private BufferedImage noImage;
+	final Graphics2D graphics;
+//	private static final Image NULL = null;  
 
 	public GamePanel(String  spriteName, int spriteX , int spriteY  , int score) throws IOException 
 	{
@@ -28,10 +45,12 @@ public class GamePanel extends JPanel{
 		this.spriteX = spriteX;
 		this.spriteY = spriteY;
 		this.score = score;
+        this.noImage = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+        this.graphics = this.noImage.createGraphics();
 	}
 	
-	public void paintComponentBefore(Graphics g){
-		paintComponent(g);
+	public void paintComponentBefore(){
+		paintComponent(this.graphics);
 		
 	}
 	
@@ -47,15 +66,18 @@ public class GamePanel extends JPanel{
 		System.out.println("yo");
 		//Image img = NULL;
 		try {
-			 System.out.println(adressSprite);
+			 //System.out.println(adressSprite);
 			 File OpenSprite = new File(adressSprite);
-			 
+			 System.out.println(spriteX);
+			 System.out.println(spriteY);
 			 Image image = ImageIO.read(OpenSprite);
-			 g.drawImage(image,spriteX*16,spriteY*16, this);
-			 g.drawString(messageScore , 0 , 650);
+			 graphics.drawImage(image,spriteX*16,spriteY*16,spriteX,spriteY,this);
+			 //graphics.drawString(messageScore , 0 , 650);
 			 
 		} catch (IOException e) {
 			e.printStackTrace();
-		}	
+			
+		}
+		
 	}
 }

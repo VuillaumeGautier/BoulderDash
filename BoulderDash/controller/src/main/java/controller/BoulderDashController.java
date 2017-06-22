@@ -24,15 +24,15 @@ public class BoulderDashController implements contract.IController {
 		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
 		while (model.getMap().getLevelEnded() == false){
 			
-			/*try {
-				Thread.sleep(200);
+			try {
+				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
+			}
 			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
-					System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
+					//System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
 					if (model.getMap().getOnTheMapXY(x, y).getSprite() == "PLAYER.png"){
 						model.getMap().getOnTheMapXY(x, y).move(x, y, view.KeyUser(), model.getMap() );
 					}

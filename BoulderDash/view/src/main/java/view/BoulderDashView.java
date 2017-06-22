@@ -20,6 +20,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	private GamePanel gamePanel;
 	private GameOver gameOver;
 	private Success success;
+	
 
 	
 	/**
@@ -60,14 +61,16 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 		GamePanel pan;
 		try {
 			pan = new GamePanel(sprite, width, height,  score );
+			pan.paintComponentBefore();
 			this.setContentPane(pan);
-			pan.paintComponentBefore(null);
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		}
 
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		//System.out.println(sprite);
 	}
 	
