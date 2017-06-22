@@ -21,21 +21,27 @@ public class Map implements IMap {
 	public int tableID = 1;
 
 	/**
-	 *
-	 * @param String
+	 * Initialize all variables from the Database and launch the fill of the map
+	 * 
 	 * @throws SQLException 
 	 */
 	public Map() throws SQLException {
-		width=MetadataDAO.getMapMetadataWidth(tableID);
-		height=MetadataDAO.getMapMetadataHeight(tableID);
-		doorX=MetadataDAO.getMapMetadataDoorX(tableID);
-		doorY=MetadataDAO.getMapMetadataDoorY(tableID);
-		diamondsNeeded=MetadataDAO.getMapMetadataDiamondsNeeded(tableID);
+		setWidth(MetadataDAO.getMapMetadataWidth(tableID));
+		setHeight(MetadataDAO.getMapMetadataHeight(tableID));
+		setDoorX(MetadataDAO.getMapMetadataDoorX(tableID));
+		setDoorY(MetadataDAO.getMapMetadataDoorY(tableID));
+		setDiamondsNeeded(MetadataDAO.getMapMetadataDiamondsNeeded(tableID));
 		this.onTheMap = new model.elements.Element[width][height];
 		fillOnTheMap();
 		
 	}
 
+	
+	/**
+	 * Fill the map of element, using the factory to transform Database strings into Element
+	 * 
+	 * @throws SQLException 
+	 */
 	
 	public void fillOnTheMap() throws SQLException {
 		int x,y;
@@ -43,7 +49,6 @@ public class Map implements IMap {
 		for(y=0; y <height;y++){
 			for (x=0; x<width; x++){
 				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
-				
 			}
 		}
 	}
@@ -52,10 +57,6 @@ public class Map implements IMap {
 		return this.width;
 	}
 
-	/**
-	 *
-	 * @param width
-	 */
 	public void setWidth(int width) {
 		this.width = width;
 	}
@@ -64,10 +65,6 @@ public class Map implements IMap {
 		return this.height;
 	}
 
-	/**
-	 *
-	 * @param height
-	 */
 	public void setHeight(int height) {
 		this.height = height;
 	}
@@ -75,9 +72,8 @@ public class Map implements IMap {
 
 
 	/**
-	 *
-	 * @param x
-	 * @param y
+	 * Give the element located on x,y
+	 * @param position
 	 */
 	public model.elements.Element getOnTheMapXY(int x, int y) {
 
@@ -85,10 +81,8 @@ public class Map implements IMap {
 	}
 
 	/**
-	 *
-	 * @param element
-	 * @param x
-	 * @param y
+	 * Put an element on x,y
+	 * @param positon and element
 	 */
 	public void setOnTheMapXY(model.elements.Element element, int x, int y) {
 		this.onTheMap[x][y] = element;
@@ -98,10 +92,6 @@ public class Map implements IMap {
 		return this.doorY;
 	}
 
-	/**
-	 *
-	 * @param doorY
-	 */
 	public void setDoorY(int doorY) {
 		this.doorY = doorY;
 	}
@@ -110,10 +100,6 @@ public class Map implements IMap {
 		return this.doorX;
 	}
 
-	/**
-	 *
-	 * @param doorX
-	 */
 	public void setDoorX(int doorX) {
 		this.doorX = doorX;
 	}
@@ -122,10 +108,6 @@ public class Map implements IMap {
 		return this.diamondsNeeded;
 	}
 
-	/**
-	 *
-	 * @param diamondsNeeded
-	 */
 	public void setDiamondsNeeded(int diamondsNeeded) {
 		this.diamondsNeeded = diamondsNeeded;
 	}
@@ -134,14 +116,14 @@ public class Map implements IMap {
 		return diamondsPicked;
 	}
 
-	/**
-	 *
-	 * @param diamondsPicked
-	 */
 	public void setDiamondsPicked(int diamondsPicked) {
 		this.diamondsPicked = diamondsPicked;
 	}
 
+	/**
+	 *Spawn the door when the controller want it
+	 */
+	
 	public void spawnDoor() {
 		setOnTheMapXY(ElementFactory.getFromTableSymbol("DOOR"), doorX, doorY);
 
