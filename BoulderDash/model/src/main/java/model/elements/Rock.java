@@ -31,15 +31,17 @@ public class Rock extends Motion implements Moves {
 		switch (direction){
 		
 		case 'l':
-			if(map.getOnTheMapXY(x-1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x-2, y).getSprite()=="VOID.png"){
-			map.getOnTheMapXY(x-2, y).walkOver(x-1, y, direction,map);
-			map.getOnTheMapXY(x-1, y).walkOver(x, y, direction,map);
+			if(map.getOnTheMapXY(x+1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x+2, y).getSprite()=="VOID.png"){
+				System.out.println("bite");
+			map.getOnTheMapXY(x+2, y).walkOver(x+1, y, direction,map);
+			map.getOnTheMapXY(x+1, y).walkOver(x, y, direction,map);
 			}
 			break;
 			
 		case 'r':
-			if(map.getOnTheMapXY(x+1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x+2, y).getSprite()=="VOID.png"){
-				map.getOnTheMapXY(x+2, y).walkOver(x+1, y, direction,map);
+			if(map.getOnTheMapXY(x-1, y+1).getSprite()!="VOID.png" && map.getOnTheMapXY(x-2, y).getSprite()=="VOID.png"){
+				map.getOnTheMapXY(x-2, y).walkOver(x-1, y, direction,map);
+				map.getOnTheMapXY(x-1, y).walkOver(x, y, direction,map);
 				}
 			break;
 			

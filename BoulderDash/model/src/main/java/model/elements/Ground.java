@@ -25,10 +25,10 @@ public abstract class  Ground extends Element {
 	public void walkOver(int x, int y, char direction,Map map) {
 		switch (direction){
 		case 'u':
-			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y+1);
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y-1);
 			break;
 		case 'd':
-			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y-1);
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y+1);
 			break;
 		case 'l':
 			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x+1,y);
