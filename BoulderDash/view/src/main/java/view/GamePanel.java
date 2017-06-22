@@ -8,42 +8,49 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import view.BoulderDashView;
 
 
 
 public class GamePanel extends JPanel{
 
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private static final Image NULL = null; 
+	private String spriteName ;
+	private int spriteX;
+	private int spriteY;
+	private int score;
+//	private static final Image NULL = null; 
 
-	public GamePanel(String  spriteName, int spriteX , int spriteY  , int score) 
+	public GamePanel(String  spriteName, int spriteX , int spriteY  , int score) throws IOException 
 	{
-		  
-		String adress = "/boulderdash/sprites/";
+		this.spriteName=spriteName;
+		this.spriteX = spriteX;
+		this.spriteY = spriteY;
+		this.score = score;
+	}
+	
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		// TODO Auto-generated method stub
+		String adress = "C:\\Users\\julie\\git\\BoulderDash\\BoulderDash\\sprites\\";
 		String adresseSprite = adress + spriteName; 
+		//String adresseSprite = spriteName;
 		String message = "diamond needed : " ;
 		String messageScore = message + score;
-		
-		Image img = NULL;
+		System.out.println("yo");
+		//Image img = NULL;
 		try {
-			img = ImageIO.read(new File(adresseSprite));
+			 System.out.println(adresseSprite);
+			 File OpenSprite = new File(adresseSprite);
+			 
+			 Image image = ImageIO.read(OpenSprite);
+			 g.drawImage(image,spriteX*16,spriteY*16, this);
+			 g.drawString(messageScore , 0 , 650);
+			 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		Graphics g = null;
-	
-		g.drawImage(img,spriteX*16,spriteY*16, this);
-		g.drawString(messageScore , 0 , 650);
-		
-		
-		System.out.println(adresseSprite);
+		}	
 	}
-
-	
-
 }

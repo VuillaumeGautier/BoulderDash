@@ -11,12 +11,24 @@ import javax.swing.JPanel;
 public class GameOver extends JPanel{
 
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;  
 	private static final Image NULL = null;
 
+	
+	
+	/**
+	 * this methode is used in BoulderDashView 
+	 * his goal is to display a message "Game Over " when the game is loosed 
+	 * @param null
+	 * 		graphics g --> element for use JPanel 
+	 * @return null 
+	 * 		 
+	 * @author Julien  
+	 */
+	
+	
+	
 	public GameOver(Graphics g )  
 	{
 		

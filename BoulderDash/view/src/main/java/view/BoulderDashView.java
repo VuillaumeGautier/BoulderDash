@@ -1,5 +1,7 @@
 package view;
 
+import java.io.IOException;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 /*import view.GamePanel; 
@@ -51,14 +53,15 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	 * @return void 
 	 * @see GamePanel
 	 * @author Julien 
+	 * @throws IOException 
 	 */
-	public void showPanel (int width, int height, String sprite,int score)
+	public void showPanel (int width, int height, String sprite,int score) throws IOException
 	{
 		JPanel pan = new JPanel();
 		this.setContentPane(pan);
-		this.setContentPane(new GamePanel(sprite, width, height,  score)); 
+		this.setContentPane(new GamePanel(sprite, width, height,  score )); 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		System.out.println(sprite);
+		//System.out.println(sprite);
 	}
 	
 	
@@ -116,7 +119,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
  * methode for controler can have keyUser value 
  * @param null
  * @return int 
- * @see  
+ * @see  keyControler
  */
 	
 	public int KeyUser()

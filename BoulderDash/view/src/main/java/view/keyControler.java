@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 
 public class keyControler implements KeyListener {
 	
-	private static int keyUser;
+	private static int keyUser = 0;
 
 	private JLabel label;
 
