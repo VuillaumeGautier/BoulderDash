@@ -12,7 +12,7 @@ package model.elements;
 
 public abstract class ElementFactory {
 
-	private static Rock Rock = new Rock();
+	private static Rock Rock = new Rock(); 
 	private static Diamond Diamond = new Diamond();
 	private static Enemy Enemy = new Enemy();
 	private static Player Player = new Player();
@@ -28,14 +28,14 @@ public abstract class ElementFactory {
 	 * @param tableSymbol
 	 */
 	public static Element getFromTableSymbol(String fileSymbol) {
-		
-		for (final Element Element : elements) {
-            if (Element.getSprite() == (fileSymbol+".png")) {
+
+        for (final Element Element : elements) {
+            if (Element.getSprite().compareTo(fileSymbol+".png") == 0 ) {
                 return Element;
             }
         }
         return Void;//
-    
-	}
 
+    }
+	
 }
