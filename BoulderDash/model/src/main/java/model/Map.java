@@ -53,6 +53,36 @@ public class Map implements IMap {
 		}
 	}
 	
+	/**
+	 *Spawn the door when the controller wants it
+	 */
+	
+	public void spawnDoor() {
+		setOnTheMapXY(ElementFactory.getFromTableSymbol("DOOR"), doorX, doorY);
+
+	}
+	
+	/**
+	 * Give the element located on x,y
+	 * @param position
+	 * @return Element on x,y
+	 */
+	public model.elements.Element getOnTheMapXY(int x, int y) {
+
+		return onTheMap[x][y];
+	}
+
+	/**
+	 * Put an element on x,y
+	 * @param positon and element
+	 */
+	public void setOnTheMapXY(model.elements.Element element, int x, int y) {
+		this.onTheMap[x][y] = element;
+	}
+	
+	
+	
+	
 	public int getWidth() {
 		return this.width;
 	}
@@ -67,25 +97,6 @@ public class Map implements IMap {
 
 	public void setHeight(int height) {
 		this.height = height;
-	}
-
-
-
-	/**
-	 * Give the element located on x,y
-	 * @param position
-	 */
-	public model.elements.Element getOnTheMapXY(int x, int y) {
-
-		return onTheMap[x][y];
-	}
-
-	/**
-	 * Put an element on x,y
-	 * @param positon and element
-	 */
-	public void setOnTheMapXY(model.elements.Element element, int x, int y) {
-		this.onTheMap[x][y] = element;
 	}
 
 	public int getDoorY() {
@@ -120,14 +131,7 @@ public class Map implements IMap {
 		this.diamondsPicked = diamondsPicked;
 	}
 
-	/**
-	 *Spawn the door when the controller want it
-	 */
-	
-	public void spawnDoor() {
-		setOnTheMapXY(ElementFactory.getFromTableSymbol("DOOR"), doorX, doorY);
 
-	}
 
 	public boolean getLevelEnded() {
 		return levelEnded;
