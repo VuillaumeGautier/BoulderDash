@@ -13,8 +13,15 @@ public class Success extends JPanel{
 
 	
 	/**
-	 * 
-	 */
+     * this methode is used in BoulderDashView 
+     * his goal is to display a message "Victory" when a level is win
+     * @param null
+     *         graphics g --> element for use JPanel 
+     * @return null 
+     *
+     * @author Julien
+     */
+
 	private static final long serialVersionUID = 1L;
 	private static final Image NULL = null;  
 

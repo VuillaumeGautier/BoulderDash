@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import model.BoulderDashModel;
 /*import view.GamePanel; 
 import view.GameOver;
 import view.Success;*/
@@ -16,12 +18,18 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 
 	private static final long serialVersionUID = 1L;
 	private static final String String = null;
+	private BoulderDashModel model;
 
+	  private JFrame mainFrame;
+	
 	private GamePanel gamePanel;
 	private GameOver gameOver;
 	private Success success;
 	
-
+	public BoulderDashView(BoulderDashModel model) {
+		this.model = model;
+	}
+  
 	
 	/**
 	 * windows creation
@@ -34,35 +42,28 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	
 	public void show(int x , int y)  
 	{	
-		
+		mainFrame = new JFrame();
 		this.setTitle("Boulderdash");
 		this.setSize(x*16, y*16);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);    //block windows size
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setContentPane(new FontPanel());
 		System.out.println(x);
 		System.out.println(y);
 		
 	}
 
 	
-	/**
-	 * Jpanel --> windows filling with image display
-	 * this method is called for each analyzed cases
-	 * @param int width, int height, String sprite,int score
-	 * 			sprite coordinates / sprite to show / needed diamonds to display 
-	 * @return void 
-	 * @see GamePanel
-	 * @author Julien 
-	 */
-	public void showPanel (int width, int height, String sprite,int score)
+	
+	/*public void showPanel (int width, int height, String sprite,int score)
 	{
 		GamePanel pan;
 		try {
 			pan = new GamePanel(sprite, width, height,  score );
 			pan.paintComponentBefore();
-			this.setContentPane(pan);
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -73,7 +74,7 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 		
 		//System.out.println(sprite);
 	}
-	
+	*/
 	
 	/**
 	 * windows creation for gameOver display  --> instincts JPanel with "gameOver" 
@@ -136,4 +137,11 @@ public class BoulderDashView extends JFrame implements contract.IView  {
 	{
 		return keyControler.getKeyUser();
 	}
+
+
+@Override
+public void showPanel(int widht, int height, java.lang.String sprite, int score) throws IOException {
+	// TODO Auto-generated method stub
+	
+}
 }
