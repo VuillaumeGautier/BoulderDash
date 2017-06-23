@@ -14,7 +14,7 @@ import view.keyControler;
 
 
 
-public class BoulderDashView extends JFrame implements contract.IView  {
+public class BoulderDashView extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	private static final String String = null;

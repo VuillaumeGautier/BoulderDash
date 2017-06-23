@@ -22,7 +22,7 @@ public abstract class Main {
 	public static void main(final String[] args) throws SQLException {
 		
 		BoulderDashModel model = new BoulderDashModel();
-		BoulderDashView view = new BoulderDashView();
+		BoulderDashView view = new BoulderDashView(model);
 		BoulderDashController ctrl = new BoulderDashController(view, model);
 		ctrl.play();
 	}

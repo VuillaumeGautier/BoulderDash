@@ -9,7 +9,7 @@ import view.BoulderDashView;
  * @author Emmanuel BOUSSER
  * 
  */
-public class BoulderDashController implements contract.IController {
+public class BoulderDashController{
 
 	private BoulderDashModel model;
 	private BoulderDashView view;
