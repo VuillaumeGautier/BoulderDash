@@ -24,7 +24,7 @@ public class FontPanel extends Container {
 
 	public void BoulderDashView(BoulderDashModel model) {
 		this.model = model;
-	
+	}
 	/**
 	 * creat a container
 	 * read the map table and creat a JPanel for each sprite
