@@ -23,7 +23,7 @@ public class MetadataDAOTest {
 
 	@Before
 	public void setUp() throws Exception {
-		MetadataDAO table = new MetadataDAO();
+		//MetadataDAO table = new MetadataDAO();
 	}
 
 	@After

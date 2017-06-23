@@ -23,7 +23,7 @@ public class ElementDAOTest {
 
 	@Before
 	public void setUp() throws Exception {
-		ElementDAO table = new ElementDAO();
+		//ElementDAO table = new ElementDAO();
 	}
 
 	@After
