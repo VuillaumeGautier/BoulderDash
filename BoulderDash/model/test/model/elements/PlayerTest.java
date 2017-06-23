@@ -11,7 +11,7 @@ import org.junit.Test;
 import model.Map;
 
 public class PlayerTest {
-
+	static Map map;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -22,7 +22,7 @@ public class PlayerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		Map map = new Map("LV1");
+		Map map = new Map();
 	}
 
 	@After
@@ -37,7 +37,7 @@ public class PlayerTest {
 	@Test
 	public void testDeath() {
 		final String expected = "void.png";
-		assertEquals(expected, Map.getOnTheMapXY(4, 5).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(4, 5).getSprite());
 		
 	}
 
@@ -54,25 +54,25 @@ public class PlayerTest {
 	@Test
 	public void testMoveUp() {
 		final String expected = "player.png";
-		assertEquals(expected, Map.getOnTheMapXY(4, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(4, 4).getSprite());
 	}
 
 	@Test//
 	public void testMoveDown() {
 		final String expected = "player.png";
-		assertEquals(expected, Map.getOnTheMapXY(4, 6).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(4, 6).getSprite());
 	}
 
 	@Test
 	public void testMoveLeft() {
 		final String expected = "player.png";
-		assertEquals(expected, Map.getOnTheMapXY(3, 5).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(3, 5).getSprite());
 	}
 
 	@Test
 	public void testMoveRight() {
 		final String expected = "player.png";
-		assertEquals(expected, Map.getOnTheMapXY(5, 5).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 5).getSprite());
 	}
 
 }

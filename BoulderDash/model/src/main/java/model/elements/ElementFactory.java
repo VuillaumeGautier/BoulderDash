@@ -3,9 +3,8 @@ package model.elements;
 
 
 /**
- * <h1>The Class MetadataDAO.</h1>
  * 
- * @author Vuillaume Gautier
+ * @author Emmanuel BOUSSER
  * @version 1.0
  */
 
@@ -24,8 +23,10 @@ public abstract class ElementFactory {
 	private static Element[] elements = {Rock,Diamond,Enemy,Player,Void,Soil,Door,Border,Destructible};
 
 	/**
-	 *
+	 * check if the sprite recover from the BDD exist and return the good element
+	 * @author Emmanuel BOUSSER
 	 * @param tableSymbol
+	 * @return Element
 	 */
 	public static Element getFromTableSymbol(String fileSymbol) {
 

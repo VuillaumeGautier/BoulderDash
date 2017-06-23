@@ -17,7 +17,7 @@ public class BoulderDashController implements contract.IController {
 	private int num = 0;
 	
 	/**
-	 * check and refrech loop
+	 * check the map and send the element to the view
 	 * @author Emmanuel BOUSSER
 	 * 
 	 */
