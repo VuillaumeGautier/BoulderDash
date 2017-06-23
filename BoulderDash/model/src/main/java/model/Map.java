@@ -6,7 +6,12 @@ import model.IMap;
 import model.dao.ElementDAO;
 import model.dao.MetadataDAO;
 import model.elements.ElementFactory;
-
+/**
+ * <h1>The Class MetadataDAO.</h1>
+ * 
+ * @author Vuillaume Gautier
+ * @version 1.0
+ */
 public class Map implements IMap {
 
 	private int width;
@@ -18,7 +23,7 @@ public class Map implements IMap {
 	private int doorY;
 	private boolean levelEnded = false;
 	private boolean levelLost = false;
-	public int tableID = 2;
+	public int tableID = 1;
 
 	/**
 	 * Initialize all variables from the Database and launch the fill of the map
