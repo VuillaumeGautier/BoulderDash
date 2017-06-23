@@ -18,7 +18,7 @@ public class Map implements IMap {
 	private int doorY;
 	private boolean levelEnded = false;
 	private boolean levelLost = false;
-	public int tableID = 1;
+	public int tableID = 2;
 
 	/**
 	 * Initialize all variables from the Database and launch the fill of the map

@@ -13,7 +13,7 @@ import model.Map;
 public class Enemy extends Living implements Moves {
 
 	private static String SPRITE = "ENEMY.png";
-	private char direction = 'r';
+	private char direction = 'd';
 
 	public Enemy() {
 		super(SPRITE);
@@ -33,6 +33,28 @@ public class Enemy extends Living implements Moves {
 	
 
 	public void walkOver(int x, int y, char direction, Map map) {
+switch (direction){
+		
+		case 'r':
+			x = x-1;
+			
+			break;
+		
+			case 'l':
+			x = x+1;
+			
+			break;
+		
+		case 'u':
+			y = y-1;
+			
+			break;
+		
+		case 'd':
+			y = y+1;;
+			
+			break;
+		}
 		death(x,y, map);
 	}
 
@@ -48,24 +70,27 @@ public class Enemy extends Living implements Moves {
 			for(j=0; j<3;j++)
 			{
 				map.getOnTheMapXY(x-1+j, y-1+i).destruction(x-1+j, y-1+i,map);
-				map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
+				if (map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="VOID.png"){
+					map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
+					}
+				}
 			}
 		}
-	}
+	
 
 	/**
 	 *	determine the behavior of the enemy
 	 * @param postition, direction the move comes and the map pointer
 	 */
 	public void move(int x, int y,int direction, Map map) {
-		switch (this.direction){
+		/*switch (this.direction){
 		
 		case 'r':
 			moveRight(x, y, map);
 			
 			break;
 		
-		case 'l':
+			case 'l':
 			moveLeft(x, y, map);
 			
 			break;
@@ -79,10 +104,11 @@ public class Enemy extends Living implements Moves {
 			moveDown(x, y,map);
 			
 			break;
-		}
+		}*/
 	}
 
 	public boolean freePlace(int x, int y, Map map){
+		System.out.println(map.getOnTheMapXY(x, y).getSprite());
 		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.png" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.png"){
 			return true;
 		}

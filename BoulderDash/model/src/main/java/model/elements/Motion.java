@@ -41,15 +41,13 @@ public abstract class Motion extends Element implements Moves {
 			moveDown(x,y,map);
 			movement = true;
 		}
-		else{
-			movement = false;
-		}
 		
-		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y-1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y-1).getSprite()=="DIAMOND.png"))){
+		
+		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.png"))){
 			moveRight(x,y,map);
 		}
 		
-		if (freePlace(x+1, y,map) && freePlace(x+1, y+1,map) && ((map.getOnTheMapXY(x, y-1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y-1).getSprite()=="DIAMOND.png"))){
+		if (freePlace(x+1, y,map) && freePlace(x+1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.png"))){
 			moveLeft(x,y,map);
 
 		}
