@@ -11,8 +11,7 @@ import model.*;
 
 public class DiamondTest {
 	private Map map;
-	private Map map2;
-	private Map map3;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -26,8 +25,8 @@ public class DiamondTest {
 		
 		
 		
-		Map map = new Map("useless");
-	}////ggfdfdfd
+		Map map = new Map();
+	}
 
 	@After
 	public void tearDown() throws Exception {
@@ -47,7 +46,7 @@ public class DiamondTest {
 	@Test
 	public void testWalkOver() {
 		final String expected = "player.png";
-		assertEquals(expected, Map.getOnTheMapXY(0, 0).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(0, 0).getSprite());
 		//
 	}
 	

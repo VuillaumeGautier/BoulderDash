@@ -11,7 +11,7 @@ import org.junit.Test;
 import model.Map;
 
 public class EnemyTest {
-
+	static Map map;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -23,7 +23,7 @@ public class EnemyTest {
 	@Before
 	public void setUp() throws Exception {
 		
-		Map map = new Map("LV2");
+		Map map = new Map();
 	}
 
 	@After
@@ -34,16 +34,16 @@ public class EnemyTest {
 	public void testDestruction() {
 		final String expected = "diamond.png";
 		
-		assertEquals(expected, Map.getOnTheMapXY(6, 3).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 3).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 5).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(6, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(6, 4).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 4).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 4).getSprite());
-		//fail("Not yet implemented");//
+		assertEquals(expected, map.getOnTheMapXY(6, 3).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 3).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 5).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(6, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(6, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 4).getSprite());
+		
 	}
 
 	@Test
@@ -51,15 +51,15 @@ public class EnemyTest {
 		
 		final String expected = "void.png";
 		
-		assertEquals(expected, Map.getOnTheMapXY(6, 3).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 3).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 5).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(6, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 2).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(6, 4).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(5, 4).getSprite());
-		assertEquals(expected, Map.getOnTheMapXY(7, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(6, 3).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 3).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 5).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(6, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 2).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(6, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(5, 4).getSprite());
+		assertEquals(expected, map.getOnTheMapXY(7, 4).getSprite());
 		//fail("Not yet implemented");
 	}
 
