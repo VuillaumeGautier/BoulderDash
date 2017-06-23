@@ -12,7 +12,7 @@ import model.Map;
 
 public abstract class Motion extends Element implements Moves {
 
-	boolean movement;
+	boolean movement = false;
 	
 	public Motion(String sprite ) {
 		super(sprite);
@@ -22,7 +22,7 @@ public abstract class Motion extends Element implements Moves {
 	
 
 	public boolean freePlace(int x, int y,Map map){
-		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.png" || (map.getOnTheMapXY(x, y).getSprite()=="PLAYER.png" && movement) || (map.getOnTheMapXY(x, y).getSprite()=="ENEMY.png" && movement)){
+		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.png" || (map.getOnTheMapXY(x, y).getSprite()=="PLAYER.png"&& movement ) || (map.getOnTheMapXY(x, y).getSprite()=="ENEMY.png" && movement)){
 			return true;
 			
 		}
@@ -36,11 +36,18 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void move(int x, int y, int direction,Map map) {
-		
+		System.out.println(map.getOnTheMapXY(x, y+1).getSprite());
 		if (freePlace(x,y+1,map)){
 			moveDown(x,y,map);
 			movement = true;
+			//System.out.println(movement);
+			
 		}
+		else{
+			movement = false;
+			
+		}
+		
 		
 		
 		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.png"))){
