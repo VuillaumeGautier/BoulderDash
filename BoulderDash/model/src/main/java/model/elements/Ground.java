@@ -15,7 +15,7 @@ public abstract class  Ground extends Element {
 	public Ground(String sprite) {
 		super(sprite);
 		// TODO Auto-generated constructor stub
-	}
+	} 
 
 	/**
 	 *

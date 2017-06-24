@@ -57,7 +57,7 @@ public class BoulderDashController{
 			
 			for(int y = 0 ; y < model.getMap().getHeight() ; y++){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
-				  model.getMap().getOnTheMapXY(x, y).setWalk(0);
+				  model.getMap().getOnTheMapXY(x, y).setWalk(0); 
 				}	
 			}
 			

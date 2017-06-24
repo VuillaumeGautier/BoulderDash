@@ -74,7 +74,7 @@ switch (direction){
 					map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
 					}
 				}
-			}
+			} 
 		}
 	
 
