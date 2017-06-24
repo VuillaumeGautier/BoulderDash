@@ -31,10 +31,10 @@ public abstract class  Ground extends Element {
 			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y+1);
 			break;
 		case 'l':
-			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x+1,y);
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x-1,y);
 			break;
 		case 'r':
-			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x-1,y);
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x+1,y);
 			break;
 		}
 			map.setOnTheMapXY(new Void(), x, y);
