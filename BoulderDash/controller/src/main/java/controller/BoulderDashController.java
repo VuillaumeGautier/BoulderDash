@@ -103,7 +103,7 @@ public class BoulderDashController{
 				}
 				System.out.println("");
 			}
-			System.out.println(model.getMap().getDiamondsPicked());
+			//System.out.println(model.getMap().getDiamondsPicked());
 			Scanner inne = new Scanner(System.in);
 			num = inne.nextInt();
 		}

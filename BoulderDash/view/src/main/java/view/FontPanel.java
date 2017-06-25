@@ -32,14 +32,16 @@ public class FontPanel extends Container {
 
 	
 	
-	public void BoulderDashView(BoulderDashModel model) {
-		this.model = model;
-	}
+	//public void BoulderDashView(BoulderDashModel model) {
+	//	this.model = model;
+	//}
 	
 	
 	FontPanel (BoulderDashModel model2, int x, int y){
 		System.out.println("construteur FontPanel");
+		this.model= model;
 	}
+	
 	/**
 	 * creat a container
 	 * read the map table and creat a JPanel for each sprite
@@ -53,7 +55,7 @@ public class FontPanel extends Container {
 	 */
 	public void FontPanel (BoulderDashModel model, int x , int y ) throws IOException 
 	{
-		
+		System.out.println("FontPanel ");
 		setLayout(new GridLayout(x,y));
 		for (int i = 0; i<=x ; i++)
 		{

@@ -1,8 +1,10 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.io.IOException;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import model.BoulderDashModel; 
@@ -45,9 +47,15 @@ public class BoulderDashView extends JFrame{
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setContentPane(new FontPanel(model, x ,y));
+
+		  
+      
+
+        
+        this.addKeyListener(new keyControler());
+		
 		System.out.println(x);
 		System.out.println(y);
-		
 	}
 
 	

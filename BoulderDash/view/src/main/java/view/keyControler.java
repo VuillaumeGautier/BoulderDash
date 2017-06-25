@@ -13,10 +13,13 @@ public class keyControler implements KeyListener {
 
     public void TitreKeyListener(JLabel label_) {
         label = label_;
+        System.out.println("key listener");
     }
  
     public void keyPressed(KeyEvent e) {
        keyUser = e.getKeyCode();
+       System.out.println("key user *****");
+       System.out.println(keyUser);
     }   
  
     public void keyReleased(KeyEvent e) {
