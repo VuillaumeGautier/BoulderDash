@@ -16,7 +16,7 @@ public class keyControler implements KeyListener {
         System.out.println("key listener");
     }
  
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(KeyEvent e) { 
        keyUser = e.getKeyCode();
        System.out.println("key user *****");
        System.out.println(keyUser);

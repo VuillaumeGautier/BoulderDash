@@ -37,7 +37,7 @@ public class BoulderDashView extends JFrame{
 	 * @author Julien  
 	 */
 	
-	public void show(int x , int y)  
+	public void show(int x , int y)   
 	{	
 		mainFrame = new JFrame();
 		this.setTitle("Boulderdash");
