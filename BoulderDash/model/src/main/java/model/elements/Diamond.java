@@ -35,10 +35,10 @@ public class Diamond extends Motion implements Moves{
 				map.setOnTheMapXY(new Player(), x, y+1);
 				break;
 			case 'l':
-				map.setOnTheMapXY(new Player(), x+1, y);
+				map.setOnTheMapXY(new Player(), x-1, y);
 				break;
 			case 'r':
-				map.setOnTheMapXY(new Player(), x-1, y);
+				map.setOnTheMapXY(new Player(), x+1, y);
 				break;
 			
 		}
