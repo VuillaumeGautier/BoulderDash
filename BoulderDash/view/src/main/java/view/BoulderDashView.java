@@ -44,7 +44,7 @@ public class BoulderDashView extends JFrame{
 		this.setTitle("Boulderdash");
 		this.setSize(x*16, y*16);
 		this.setLocationRelativeTo(null);
-		this.setResizable(false);    //block windows size
+		this.setResizable(true);    //block windows size
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setContentPane(new FontPanel(model, x ,y));
