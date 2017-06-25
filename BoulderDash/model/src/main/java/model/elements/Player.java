@@ -61,10 +61,10 @@ public class Player extends Living {
 			case 40:
 				moveDown(x, y,map);
 				break;
-			case 37:
+			case 39:
 				moveRight(x, y,map);
 				break;
-			case 39:
+			case 37:
 				moveLeft(x, y,map);
 				break;
 		}

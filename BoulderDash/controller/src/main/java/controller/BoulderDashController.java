@@ -22,7 +22,7 @@ public class BoulderDashController{
 	 */
 	public void play() {
 		// TODO - implement BoulderDashController.play
-		//view.show(model.getMap().getWidth() , model.getMap().getHeight() );
+		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
 		while (model.getMap().getLevelEnded() == false){
 			
 			try {
