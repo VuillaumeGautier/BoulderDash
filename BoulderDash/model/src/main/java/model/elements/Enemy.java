@@ -14,6 +14,7 @@ public class Enemy extends Living implements Moves {
 
 	private static String SPRITE = "ENEMY.png";
 	private char direction = 'r';
+	
 
 	public Enemy() {
 		super(SPRITE);
@@ -83,29 +84,29 @@ switch (direction){
 	 * @param postition, direction the move comes and the map pointer
 	 */
 	public void move(int x, int y,int direction, Map map ) {
-		System.out.println(this.walk);
+		
+		System.out.println(direction);
 		if (this.walk == 0){
 		  
-		this.walk = 1; 
-		System.out.println(this.walk);
-		switch (this.direction){
 		
-		case 'r':
+		switch (direction){
+		
+		case 0:
 			moveRight(x, y, map);
 			
 			break;
 		
-			case 'l':
+			case 1:
 			moveLeft(x, y, map);
 			
 			break;
 		
-		case 'u':
+		case 2:
 			moveUp(x, y,map);
 			
 			break;
 		
-		case 'd':
+		case 3:
 			moveDown(x, y,map);
 			
 			break;
@@ -129,63 +130,15 @@ switch (direction){
 	 * @param y
 	 */
 	public void moveUp(int x, int y,Map map ) {
-		if (freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Wall on the right, nothing forward
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
+		if (freePlace( x,  y-1, map)){
+			map.getOnTheMapXY(x, y-1).walkOver(x, y,'u',map);
+			this.walk = 1; 
 		}
-		
-		else if (freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Wall on the right, wall forward, nothing left
-			direction = 'l';
-			map.getOnTheMapXY(x-1,y).walkOver(x, y, direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)){
-			//Wall on the right, wall forward, wall left, nothing back
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)== false){
-			//Surrounded of wall
-		}
-		
-		
-		else if (freePlace(x+1,y,map) && freePlace(x+1,y+1,map)==false){
-			//Nothing right, wall behind right
-			direction = 'r';
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map) && freePlace(x+1,y+1,map) && freePlace(x,y-1,map)){
-			//Nothing right, nothing behind right, nothing forward
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map) && freePlace(x+1,y+1,map) && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Nothing right, nothing behind right, wall forward, nothing left
-			direction = 'l';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map) && freePlace(x+1,y+1,map) && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)){
-			//Nothing right, nothing behind right, wall forward, wall left, nothing back
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		else if (freePlace(x+1,y,map) && freePlace(x+1,y+1,map) && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map) == false){
-			//Nothing right, nothing behind right, wall forward, wall left, wall back
-			direction = 'r';
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
+		else {
+			move(x, y, 3, map);
 		}
 	}
 
-	
-	
-	
-	
-	
 	
 	
 	/**
@@ -194,139 +147,32 @@ switch (direction){
 	 * @param y
 	 */
 	public void moveDown(int x, int y,Map map) {
-
-		
-		if (freePlace(x-1,y,map)==false && freePlace(x,y+1,map)){
-			//Wall on the right, nothing forward
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
+		if (freePlace( x,  y+1, map)){
+			map.getOnTheMapXY(x, y+1).walkOver(x, y,'d',map);
+			this.walk = 1; 
 		}
-		
-		if (freePlace(x-1,y,map)==false && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)){
-			//Wall on the right, wall forward, nothing left
-			direction = 'r';
-			map.getOnTheMapXY(x+1,y).walkOver(x, y, direction,map);
+		else {
+			move(x, y, 0, map);
 		}
-		
-		if (freePlace(x-1,y,map)==false && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Wall on the right, wall forward, wall left, nothing back
-			direction = 'u';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x-1,y,map)==false && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)== false){
-			//Surrounded of wall
-		}
-		
-		
-		if (freePlace(x-1,y,map) && freePlace(x-1,y-1,map)==false){
-			//Nothing right, wall behind right
-			direction = 'l';
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x-1,y,map) && freePlace(x-1,y-1,map) && freePlace(x,y+1,map)){
-			//Nothing right, nothing behind right, nothing forward
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x-1,y,map) && freePlace(x-1,y-1,map) && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)){
-			//Nothing right, nothing behind right, wall forward, nothing left
-			direction = 'r';
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x-1,y,map) && freePlace(x-1,y-1,map) && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Nothing right, nothing behind right, wall forward, wall left, nothing back
-			direction = 'u';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x-1,y,map) && freePlace(x-1,y-1,map) && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map) == false){
-			//Nothing right, nothing behind right, wall forward, wall left, wall back
-			direction = 'l';
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		
-		
 	}
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	/**
 	 *
 	 * @param x
 	 * @param y
 	 */
 	public void moveLeft(int x, int y,Map map) {
-
-		if (freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Wall on the right, nothing forward
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
+		if (freePlace( x-1,  y, map)){
+			map.getOnTheMapXY(x-1, y).walkOver(x, y,'l',map);
+			this.walk = 1; 
 		}
-		
-		if (freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)){
-			//Wall on the right, wall forward, nothing left
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y, direction,map);
-		}
-		
-		if (freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)){
-			//Wall on the right, wall forward, wall left, nothing back
-			direction = 'r';
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y-1,map)==false && freePlace(x-1,y,map)==false && freePlace(x,y+1,map)==false && freePlace(x+1,y,map)== false){
-			//Surrounded of wall
-		}
-		
-		
-		if (freePlace(x,y-1,map) && freePlace(x+1,y-1,map)==false){
-			//Nothing right, wall behind right
-			direction = 'u';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)){
-			//Nothing right, nothing behind right, nothing forward
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Nothing right, nothing behind right, wall forward, nothing left
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Nothing right, nothing behind right, wall forward, wall left, nothing back
-			direction = 'r';
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map) == false){
-			//Nothing right, nothing behind right, wall forward, wall left, wall back
-			direction = 'u';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
+		else {
+			move(x, y, 2, map);
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/**
@@ -336,57 +182,13 @@ switch (direction){
 	 */
 	public void moveRight(int x, int y,Map map) {
 		
-		if (freePlace(x,y+1,map)==false && freePlace(x+1,y,map)){
-			//Wall on the right, nothing forward
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
+		if (freePlace( x+1,  y, map)){
+			map.getOnTheMapXY(x+1, y).walkOver(x, y,'r',map);
+			this.walk = 1; 
 		}
-		
-		if (freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Wall on the right, wall forward, nothing left
-			direction = 'u';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y, direction,map);
+		else {
+			move(x, y, 1, map);
 		}
-		
-		if (freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Wall on the right, wall forward, wall left, nothing back
-			direction = 'l';
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map)==false && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)== false){
-			//Surrounded of wall
-		}
-		
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map)==false){
-			//Nothing right, wall behind right
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)){
-			//Nothing right, nothing behind right, nothing forward
-			map.getOnTheMapXY(x+1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)){
-			//Nothing right, nothing behind right, wall forward, nothing left
-			direction = 'u';
-			map.getOnTheMapXY(x, y-1).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map)){
-			//Nothing right, nothing behind right, wall forward, wall left, nothing back
-			direction = 'l';
-			map.getOnTheMapXY(x-1, y).walkOver(x, y,direction,map);
-		}
-		
-		if (freePlace(x,y+1,map) && freePlace(x-1,y+1,map) && freePlace(x+1,y,map)==false && freePlace(x,y-1,map)==false && freePlace(x-1,y,map) == false){
-			//Nothing right, nothing behind right, wall forward, wall left, wall back
-			direction = 'd';
-			map.getOnTheMapXY(x, y+1).walkOver(x, y,direction,map);
-		}
-
 	}
 	
 

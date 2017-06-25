@@ -98,7 +98,7 @@ public class Player extends Living {
 	 * @param position and map pointer
 	 */
 	public void moveLeft(int x, int y,Map map) {
-		map.getOnTheMapXY(x+1, y).walkOver(x,y,'l',map);
+		map.getOnTheMapXY(x-1, y).walkOver(x,y,'l',map);
 
 	}
 
@@ -108,7 +108,7 @@ public class Player extends Living {
 	 * @param position and map pointer
 	 */
 	public void moveRight(int x, int y,Map map) {
-		map.getOnTheMapXY(x-1, y).walkOver(x,y,'r',map);
+		map.getOnTheMapXY(x+1, y).walkOver(x,y,'r',map);
 
 	}
 

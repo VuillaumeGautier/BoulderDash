@@ -42,7 +42,7 @@ public class BoulderDashController{
 						num = 0;
 					}
 					else{
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,/*view.KeyUser()*/num , model.getMap());
+						model.getMap().getOnTheMapXY(x, y).move(x, y ,/*view.KeyUser()*/(int) (Math.random() * 4 ), model.getMap());
 					}
 					
 					if (model.getMap().getDiamondsNeeded() == model.getMap().getDiamondsPicked() ){
