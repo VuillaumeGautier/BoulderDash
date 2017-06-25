@@ -51,11 +51,11 @@ public abstract class Motion extends Element implements Moves {
 		
 		
 		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.png"))){
-			moveRight(x,y,map);
+			moveLeft(x,y,map);
 		}
 		
 		if (freePlace(x+1, y,map) && freePlace(x+1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.png") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.png"))){
-			moveLeft(x,y,map);
+			moveRight(x,y,map);
 
 		}
 		
@@ -97,7 +97,7 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void moveLeft(int x, int y,Map map){
-		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'l',map);
+		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'l',map);
 	}
 
 	/**
@@ -106,7 +106,7 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void moveRight(int x, int y,Map map){
-		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'r',map);
+		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'r',map);
 	}
 	
 	
