@@ -31,6 +31,7 @@ public class BoulderDashController{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			num = view.KeyUser();
 			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
 					//System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
@@ -108,7 +109,7 @@ public class BoulderDashController{
 				}
 				System.out.println("");
 			}
-			num = view.KeyUser();
+			
 		}
 		if (model.getMap().getLevelLost() == false ){
 			System.out.println("Success");
