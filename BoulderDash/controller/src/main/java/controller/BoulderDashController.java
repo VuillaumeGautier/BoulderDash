@@ -108,7 +108,9 @@ public class BoulderDashController{
 					}
 				}
 				System.out.println("");
+				
 			}
+			System.out.println("");
 			
 		}
 		if (model.getMap().getLevelLost() == false ){

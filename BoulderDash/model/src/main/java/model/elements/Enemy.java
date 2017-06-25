@@ -37,12 +37,12 @@ public class Enemy extends Living implements Moves {
 switch (direction){
 		
 		case 'r':
-			x = x-1;
+			x = x+1;
 			
 			break;
 		
 			case 'l':
-			x = x+1;
+			x = x-1;
 			
 			break;
 		
@@ -85,7 +85,6 @@ switch (direction){
 	 */
 	public void move(int x, int y,int direction, Map map ) {
 		
-		System.out.println(direction);
 		if (this.walk == 0){
 		  
 		
