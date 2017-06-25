@@ -12,7 +12,7 @@ public class BoulderDashController{
 
 	private BoulderDashModel model;
 	private BoulderDashView view;
-	public static int frameRate = 500;
+	public static int frameRate = 10;
 	private int num = 0;
 	
 	/**
@@ -26,7 +26,7 @@ public class BoulderDashController{
 		while (model.getMap().getLevelEnded() == false){
 			
 			try {
-				Thread.sleep(1500);
+				Thread.sleep(150);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
