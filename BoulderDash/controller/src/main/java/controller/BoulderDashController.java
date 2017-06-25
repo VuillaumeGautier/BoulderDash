@@ -1,7 +1,6 @@
 package controller;
 
 import model.* ;
-import java.util.Scanner;
 import view.BoulderDashView; 
 
 /**
@@ -26,12 +25,12 @@ public class BoulderDashController{
 		//view.show(model.getMap().getWidth() , model.getMap().getHeight() );
 		while (model.getMap().getLevelEnded() == false){
 			
-			/*try {
+			try {
 				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
+			}
 			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
 					//System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
@@ -109,9 +108,7 @@ public class BoulderDashController{
 				}
 				System.out.println("");
 			}
-			//System.out.println(model.getMap().getDiamondsPicked());
-			Scanner inne = new Scanner(System.in);
-			num = inne.nextInt();
+			num = view.KeyUser();
 		}
 		if (model.getMap().getLevelLost() == false ){
 			System.out.println("Success");

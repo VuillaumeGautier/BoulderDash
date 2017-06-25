@@ -89,24 +89,24 @@ switch (direction){
 		if (this.walk == 0){
 		  
 		
-		switch (direction){
+		switch (this.direction){
 		
-		case 0:
+		case 'r':
 			moveRight(x, y, map);
 			
 			break;
 		
-			case 1:
+			case 'l':
 			moveLeft(x, y, map);
 			
 			break;
 		
-		case 2:
+		case 'u':
 			moveUp(x, y,map);
 			
 			break;
 		
-		case 3:
+		case 'd':
 			moveDown(x, y,map);
 			
 			break;

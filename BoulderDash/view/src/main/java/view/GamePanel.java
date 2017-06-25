@@ -11,19 +11,18 @@ import javax.swing.JPanel;
 
 
 
-public class GamePanel extends JPanel{
+public class GamePanel<mainFrame> extends JPanel{
 
 	
 	private static final long serialVersionUID = 1L;
-	private String spriteName ;
-	private int spriteX;
-	private int spriteY;
-	private int score;
-	private BufferedImage noImage;
+	private String spriteName ; 
+	private int score;  
 	//final Graphics2D graphics;
 //	private static final Image NULL = null;  
-	private Image image2;
-
+	private Image image;
+	private mainFrame mainFrame;
+	
+	
 	/**
 	 * filling for normal game display
 	* Jpanel reads file thanks to sprite name send 
@@ -38,8 +37,10 @@ public class GamePanel extends JPanel{
 	
 
 	
-	public GamePanel(Image image2) {
+	public GamePanel(Image image) { 
 		// TODO Auto-generated constructor stub
+		this.image = image;
+		this.mainFrame = mainFrame;
 		System.out.println("construteur gamepanel");
 	}
 
@@ -51,21 +52,10 @@ public class GamePanel extends JPanel{
 	
 	@Override
 	protected void paintComponent(Graphics g) {
-		// TODO Auto-generated method stub
-		//String adress = "C:\\Users\\julie\\git\\BoulderDash\\BoulderDash\\sprites\\";
-		//String adressSprite = adress + spriteName; 
-		//String adresseSprite = spriteName;
-		//String message = "diamond needed : " ;
-		//String messageScore = message + score;
+		
 		System.out.println("yo paint component");
 		
-		//System.out.println(adressSprite);
-		// File OpenSprite = new File(adressSprite);
-		// System.out.println(spriteX);
-		// System.out.println(spriteY);
-		// Image image = ImageIO.read(OpenSprite);
-		 g.drawImage(image2, 0, 0, (ImageObserver) g);
-		 //graphics.drawString(messageScore , 0 , 650);
-		
+		g.drawImage(image, 0, 0,  BoulderDashView.getMainFrame());
+	
 	}
 }

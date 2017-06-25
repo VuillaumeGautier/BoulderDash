@@ -37,9 +37,12 @@ public class FontPanel extends Container {
 	//}
 	
 	
-	FontPanel (BoulderDashModel model2, int x, int y){
+	FontPanel (BoulderDashModel model, int x, int y) {
 		System.out.println("construteur FontPanel");
 		this.model= model;
+		System.out.println(model);
+		System.out.println(x);
+		System.out.println(y);
 	}
 	
 	/**
@@ -49,8 +52,8 @@ public class FontPanel extends Container {
 	 * @param model
 	 * @param x
 	 * @param y
-	 * @return void
-	 * @author Julien
+	 * @return void 
+	 * @author Julien  
 	 * @throws IOException 
 	 */
 	public void FontPanel (BoulderDashModel model, int x , int y ) throws IOException 
@@ -69,7 +72,7 @@ public class FontPanel extends Container {
 				System.out.println(adressSprite);
 				File OpenSprite = new File(adressSprite);
 				Image image = ImageIO.read(OpenSprite);
-				JPanel displayPanel = new GamePanel(image);
+				JPanel displayPanel = new GamePanel(image); 
 				//displayPanel.drawImage(image, 0,0,this);
 				add (displayPanel);
 			}

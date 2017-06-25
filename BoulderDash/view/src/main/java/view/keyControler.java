@@ -18,7 +18,7 @@ public class keyControler implements KeyListener {
  
     public void keyPressed(KeyEvent e) { 
        keyUser = e.getKeyCode();
-       System.out.println("key user *****");
+       System.out.println("key user "); 
        System.out.println(keyUser);
     }   
  
@@ -28,11 +28,11 @@ public class keyControler implements KeyListener {
  
     public void keyTyped(KeyEvent e) {
     }
-
+ 
     
     //=================getter and setter KEYUSER ======================
     //=================================================================
-	public static int getKeyUser() {
+	public static int getKeyUser() {  
 		return keyUser;
 	}
 

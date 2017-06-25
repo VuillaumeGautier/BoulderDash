@@ -1,23 +1,23 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.io.IOException;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import model.BoulderDashModel; 
+
+import view.GameOver;
+import view.Success;
 
 
 
 public class BoulderDashView extends JFrame{
 
 	private static final long serialVersionUID = 1L;
-	private static final String String = null;
 	private BoulderDashModel model;
 
-	  private JFrame mainFrame;
+	  private static JFrame mainFrame;
 	
 	private GamePanel gamePanel;
 	private GameOver gameOver;
@@ -35,9 +35,10 @@ public class BoulderDashView extends JFrame{
 	 * 		Size for window
 	 * @return void 
 	 * @author Julien  
+	 * @throws IOException 
 	 */
 	
-	public void show(int x , int y)   
+	public void show(int x , int y)  
 	{	
 		mainFrame = new JFrame();
 		this.setTitle("Boulderdash");
@@ -123,10 +124,10 @@ public class BoulderDashView extends JFrame{
 		JPanel panOver = new JPanel();
 		this.setContentPane(panOver);
 		this.setLocationRelativeTo(null);
-	   
+	     
 	    this.setContentPane(new Success(null));
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+	} 
 
 /**
  * methode for controler can have keyUser value 
@@ -137,12 +138,19 @@ public class BoulderDashView extends JFrame{
 	
 	public int KeyUser()
 	{
-		return keyControler.getKeyUser();
+		return keyControler.getKeyUser(); 
 	}
 
 
-public void showPanel(int widht, int height, java.lang.String sprite, int score) throws IOException {
-	// TODO Auto-generated method stub
-	
+
+
+
+public static JFrame getMainFrame() {
+	return mainFrame;
+}
+
+
+public void setMainFrame(JFrame mainFrame) {
+	this.mainFrame = mainFrame;
 }
 }
