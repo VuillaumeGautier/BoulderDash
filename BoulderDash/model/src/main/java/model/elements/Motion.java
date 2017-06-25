@@ -36,7 +36,7 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void move(int x, int y, int direction,Map map) {
-		System.out.println(map.getOnTheMapXY(x, y+1).getSprite());
+		//System.out.println(map.getOnTheMapXY(x, y+1).getSprite());
 		if (freePlace(x,y+1,map)){
 			moveDown(x,y,map);
 			movement = true;
