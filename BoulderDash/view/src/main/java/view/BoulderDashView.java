@@ -1,16 +1,11 @@
 package view;
 
-import java.awt.Graphics;
 import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import model.BoulderDashModel;
-/*import view.GamePanel; 
-import view.GameOver;
-import view.Success;*/
-import view.keyControler; 
+import model.BoulderDashModel; 
 
 
 
@@ -49,7 +44,7 @@ public class BoulderDashView extends JFrame{
 		this.setResizable(false);    //block windows size
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setContentPane(new FontPanel());
+		this.setContentPane(new FontPanel(model, x ,y));
 		System.out.println(x);
 		System.out.println(y);
 		
@@ -85,7 +80,6 @@ public class BoulderDashView extends JFrame{
 	 */
 
 
-	@Override
 	public void displayGameOver() {
 		
 		
@@ -139,7 +133,6 @@ public class BoulderDashView extends JFrame{
 	}
 
 
-@Override
 public void showPanel(int widht, int height, java.lang.String sprite, int score) throws IOException {
 	// TODO Auto-generated method stub
 	

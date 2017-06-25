@@ -20,9 +20,9 @@ public class GamePanel extends JPanel{
 	private int spriteY;
 	private int score;
 	private BufferedImage noImage;
-	final Graphics2D graphics;
+	//final Graphics2D graphics;
 //	private static final Image NULL = null;  
-	private Image image;
+	private Image image2;
 
 	/**
 	 * filling for normal game display
@@ -36,13 +36,15 @@ public class GamePanel extends JPanel{
 	
 	
 	
-	public GamePanel(Image image) 
-	{
-		this.image = image;		
-	}
+
 	
+	public GamePanel(Image image2) {
+		// TODO Auto-generated constructor stub
+		System.out.println("construteur gamepanel");
+	}
+
 	public void paintComponentBefore(){
-		paintComponent(this.graphics);
+		paintComponent(this.getGraphics());
 		
 	}
 	
@@ -56,12 +58,13 @@ public class GamePanel extends JPanel{
 		//String message = "diamond needed : " ;
 		//String messageScore = message + score;
 		System.out.println("yo paint component");
+		
 		//System.out.println(adressSprite);
 		// File OpenSprite = new File(adressSprite);
 		// System.out.println(spriteX);
 		// System.out.println(spriteY);
 		// Image image = ImageIO.read(OpenSprite);
-		 graphics.drawImage(image, 0, 0, (ImageObserver) g);
+		 g.drawImage(image2, 0, 0, (ImageObserver) g);
 		 //graphics.drawString(messageScore , 0 , 650);
 		
 	}
