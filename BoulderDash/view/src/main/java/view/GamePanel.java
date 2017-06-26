@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 import java.io.IOException;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
@@ -20,17 +21,17 @@ public class GamePanel<mainFrame> extends JPanel{
 	//final Graphics2D graphics;
 //	private static final Image NULL = null;  
 	private Image image;
-	private mainFrame mainFrame;
+	private JFrame mainFrame;
 	
 	
 	/**
-	 * filling for normal game display
+	* filling for normal game display
 	* Jpanel reads file thanks to sprite name send 
 	* Displays the image in relation to the coordinates sent 
-	 * @param String srpiteName ,int spriteX , int spriteY  , int score
-	 * @return void
-	 * @author Julien 
-	 */
+	* @param String srpiteName ,int spriteX , int spriteY  , int score
+	* @return void
+	* @author Julien 
+	*/
 	
 	
 	
@@ -40,13 +41,13 @@ public class GamePanel<mainFrame> extends JPanel{
 	public GamePanel(Image image) { 
 		// TODO Auto-generated constructor stub
 		this.image = image;
-		this.mainFrame = mainFrame;
+		mainFrame = BoulderDashView.getMainFrame();
+		//m.setVisible(true);
 		System.out.println("construteur gamepanel");
 	}
 
 	public void paintComponentBefore(){
 		paintComponent(this.getGraphics());
-		
 	}
 	
 	
@@ -56,6 +57,6 @@ public class GamePanel<mainFrame> extends JPanel{
 		System.out.println("yo paint component");
 		
 		g.drawImage(image, 0, 0,  BoulderDashView.getMainFrame());
-	
+		this.setVisible(true);
 	}
 }
